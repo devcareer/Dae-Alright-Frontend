@@ -1,5 +1,5 @@
 # Dae-Alright-Frontend
-Building a food service web app with React, using SASS as a CSS pre-processor, Bootstrap as CSS framework.
+Building a food service web app built with React, using SASS as a CSS pre-processor, Bootstrap as CSS framework.
 
 This Project was structured with the create-react-app 
 
@@ -10,11 +10,10 @@ This Project was structured with the create-react-app
 
 - Open Git bash
 - Clone project reprository from [dae-Alright repo](https://github.com/devcareer/Dae-Alright-Frontend.git)
-- run npm install on the 
+
 
 ```sh
 git clone https://github.com/devcareer/Dae-Alright-Frontend.git
-run npm install 
 ```
 - Project Structure should be Similar to this:
 
@@ -53,7 +52,12 @@ Once cloning is complete, you can open your project folder:
 ``` sh
 cd dae-alright
 ```
- Note : The asssests and components file in the src folder are for images and compnents respectively
+- depending on the package manager you decide to use run npm install or yarn install on your terminal
+``` sh
+npm install
+yarn install
+```
+ Note : The asssests and components file in the src folder are for images and Compnents respectively
 
  # Styleguides
 
