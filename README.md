@@ -14,7 +14,6 @@ This Project was structured with the create-react-app
 
 ```sh
 git clone https://github.com/devcareer/Dae-Alright-Frontend.git
-run npm install 
 ```
 - Project Structure should be Similar to this:
 
