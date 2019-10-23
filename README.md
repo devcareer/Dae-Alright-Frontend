@@ -1,5 +1,5 @@
 # Dae-Alright-Frontend
-Building a food service web app with React, using SASS as a CSS pre-processor, Bootstrap as CSS framework.
+Building a food service web app built with React, using SASS as a CSS pre-processor, Bootstrap as CSS framework.
 
 This Project was structured with the create-react-app 
 
