@@ -24,13 +24,6 @@ dae-alright
 │    ├── favicon.ico
 │    ├── index.html
 │    └── manifest.json
-├── SCSS
-|    ├── abstracts
-|    ├── base
-|    ├── components
-|    ├── layouts
-|    ├── pages
-|    └── main.scss
 ├── src
 |    ├── assests
 |    ├── components
