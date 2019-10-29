@@ -47,6 +47,7 @@ select{
 
 
 
+
 .deyAlrightFooter{
     padding-top: 25px;
     padding-bottom: 80px;
@@ -143,4 +144,18 @@ select{
         }
     }
     
+}
+
+.terms-and-condition {
+    display: flex;
+    width: 75vw;
+    margin: 10px auto;
+    justify-content: space-between;
+    
+    .period {
+        margin: 0 10px;
+    }
+    @include footer-media-query(600px){
+       flex-direction: column;
+     }
 }
