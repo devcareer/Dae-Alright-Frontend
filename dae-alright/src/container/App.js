@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './container/App.css';
+import './App.css';
+
 
 
 class App extends Component {
 
-  render(){
+  render(){ 
   return (
     <div className="App">
       <h1>dae-Alright</h1>
