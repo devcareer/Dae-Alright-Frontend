@@ -49,8 +49,13 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="socialImages">
+<<<<<<< HEAD:dae-alright/src/components/Footer/index.js
                         <img className='getApp' src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="downnload app from app store" />
                         <img  className='getApp' src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="downnload app from google play store" />
+=======
+                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
+                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
+>>>>>>> class names adjusted to reflect what they do:dae-alright/src/components/Footer/Footer.js
                     </div>
                 </div>
             </div>
