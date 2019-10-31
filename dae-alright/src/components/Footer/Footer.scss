@@ -33,14 +33,6 @@ select{
 }
 
 .logoDiv{
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
->>>>>>> completed the reusable footer part
-=======
-    //border: 3px solid black;
->>>>>>> completed the reusable footer part
     text-align: left;
     padding-left: 150px;
 
@@ -50,22 +42,6 @@ select{
 
     .footerLogo{
         margin-left: 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> completed the reusable footer part
-=======
-
-=======
-        
->>>>>>> made changes on the review made:
->>>>>>> made changes on the review made:
-=======
-        //border: 2px solid chocolate;
->>>>>>> completed the reusable footer part
     }
 }
 
@@ -89,20 +65,12 @@ select{
 
 
         
-<<<<<<< HEAD
         .cityContainer1, .faqAndContactUs{
-=======
-        .row1col1, .row2col1{
->>>>>>> completed the reusable footer part
             display: flex;
             width: 45%;
             justify-content: space-between;
             align-items: flex-start;
-<<<<<<< HEAD
             
-=======
-            //border: 1px solid red;
->>>>>>> completed the reusable footer part
 
             @include footer-media-query(1050px){
                 width: 60%;
@@ -136,41 +104,23 @@ select{
                 
             }
 
-<<<<<<< HEAD
             .cityItem2, .contactUs{
-=======
-            .row1item2, .row2item2{
->>>>>>> completed the reusable footer part
                 width: 45%;
                 
             }
         }
-<<<<<<< HEAD
         .cityContainer2{
-=======
-        .row1col2{
->>>>>>> completed the reusable footer part
             @include footer-media-query(600px){
                 display: none;
              }
         }
 
-<<<<<<< HEAD
         .socialImages{
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
-            height: 40px;
-            
-=======
-        .row2col2{
-            display: flex;
-            //border: 2px solid black;
-            justify-content: space-between;
-            margin-top: 20px;
             width: 40%;
             height: 40px;
->>>>>>> completed the reusable footer part
 
             @include footer-media-query(600px){
                 width: 100%;
@@ -179,19 +129,8 @@ select{
             img{
                 width: 45%;
             }
-<<<<<<< HEAD
-            .getApp {
-                width: 8rem;
-                height: 2rem;
-                margin: 1rem;
-                cursor: pointer;
-            }
         }
         .faqAndContactUs{
-=======
-        }
-        .row2col1{
->>>>>>> completed the reusable footer part
             align-items: flex-end;
  
             ul {
@@ -204,27 +143,4 @@ select{
         }
     }
     
-<<<<<<< HEAD
-}
-
-.terms-and-condition{
-    display: flex;
-    justify-content: space-between;
-    padding:  15px 0;
-    width: 75%;
-    margin: 0 auto;
-
-    .period {
-        margin: 0 10px;
-        font-size: bold;
-    }
-    .c{
-        cursor: pointer;
-    }
-    @include footer-media-query(600px){
-        flex-direction: column;
-    }
-    
-=======
->>>>>>> completed the reusable footer part
 }
