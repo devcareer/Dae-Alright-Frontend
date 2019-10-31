@@ -10,8 +10,8 @@ function Footer() {
             </div>
             <div className="deyAlrightFooter">
                 <div className="deyAlrightFooterRow-1">
-                    <div className="row1col1">
-                        <select name="browsers" size="1" className="row1item1">
+                    <div className="cityContainer1">
+                        <select name="browsers" size="1" className="cityItem1">
                             <option>Select All Cities</option>
                             <option value="chrome">Google Chrome</option>
                             <option value="safari">Safari</option>
@@ -20,13 +20,13 @@ function Footer() {
                             <option value="opera">Opera</option>
                             <option value="brave">Brave </option>
                         </select>
-                        <ul className="row1item2">
+                        <ul className="cityItem2">
                          <li><a href="footer.js">About Dae alright</a></li>
                          <li><a href="footer.js">Become a delivery partner</a></li>
                          <li><a href="footer.js">Become a business partner</a></li>
                         </ul>
                     </div>
-                    <div className="row1col2">
+                    <div className="cityContainer2">
                         <select name="browsers" size="1" class="row2item1">
                             <option>Select All Cities</option>
                             <option value="chrome">Google Chrome</option>
@@ -39,16 +39,16 @@ function Footer() {
                     </div>
                 </div>
                 <div className="deyAlrightFooterRow-2">
-                    <div className="row2col1">
-                        <ul className="row2item1">
+                    <div className="faqAndContactUs">
+                        <ul className="faqBlog">
                               <li><a href="footer.js">FAQs</a></li>
                              <li><a href="footer.js">Blog</a></li>
                         </ul>
-                        <ul className="row2item2">
+                        <ul className="contactUs">
                          <li><a href="footer.js">Contact us</a></li>
                         </ul>
                     </div>
-                    <div className="row2col2">
+                    <div className="socialImages">
                         <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
                         <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
                     </div>

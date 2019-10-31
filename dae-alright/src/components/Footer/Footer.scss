@@ -67,7 +67,7 @@ select{
 
 
         
-        .row1col1, .row2col1{
+        .cityContainer1, .faqAndContactUs{
             display: flex;
             width: 45%;
             justify-content: space-between;
@@ -106,18 +106,18 @@ select{
                 
             }
 
-            .row1item2, .row2item2{
+            .cityItem2, .contactUs{
                 width: 45%;
                 
             }
         }
-        .row1col2{
+        .cityContainer2{
             @include footer-media-query(600px){
                 display: none;
              }
         }
 
-        .row2col2{
+        .socialImages{
             display: flex;
             //border: 2px solid black;
             justify-content: space-between;
@@ -133,7 +133,7 @@ select{
                 width: 45%;
             }
         }
-        .row2col1{
+        .faqAndContactUs{
             align-items: flex-end;
  
             ul {
