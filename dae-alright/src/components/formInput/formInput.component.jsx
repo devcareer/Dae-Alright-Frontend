@@ -1,10 +1,10 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './formInput.styles.scss';
 
-const formInput = ({placeholder, type}) => {
+const FormInput = ({placeholder, type}) => {
     return(
-    <input className='inputs'
+    <input className='inputs px-4'
     type={type} 
     placeholder={placeholder}
     
@@ -12,4 +12,4 @@ const formInput = ({placeholder, type}) => {
     )
 };
 
-export default formInput;
+export default FormInput;
