@@ -1,68 +1,130 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Dae-Alright-Frontend
+Building a food service web app built with React, using SASS as a CSS pre-processor, Bootstrap as CSS framework.
 
-## Available Scripts
+This Project was structured with the create-react-app 
 
-In the project directory, you can run:
+- [Checkout the CRA readme](https://github.com/facebook/create-react-app/blob/master/README.md#creating-an-app) – How to create a new app.
+- [User Guide](https://facebook.github.io/create-react-app/) – How to develop apps bootstrapped with Create React App.
 
-### `npm start`
+# How to Setup the Project Locally
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Open Git bash
+- Clone project reprository from [dae-Alright repo](https://github.com/devcareer/Dae-Alright-Frontend.git)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+```sh
+git clone https://github.com/devcareer/Dae-Alright-Frontend.git
+```
+- Project Structure should be Similar to this:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+dae-alright
+├── node_modules
+├── public
+│    ├── favicon.ico
+│    ├── index.html
+│    └── manifest.json
+├── src
+|    ├── assests
+|    ├── components
+|    ├── container
+|        ├── App.css
+|        ├── App.js
+|        ├── App.test.js
+|    ├── index.css
+|    ├── index.js
+|    ├── logo.svg
+|    └── serviceWorker.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
+Once cloning is complete, you can open your project folder:
 
-### `npm run build`
+``` sh
+cd dae-alright
+```
+- depending on the package manager you decide to use run npm install or yarn install on your terminal
+``` sh
+npm install
+yarn install
+```
+ Note : The asssests and components file in the src folder are for images and Compnents respectively
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ # Styleguides
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Build and maintain products for a reasonable length of time;
+* Have developers of differing abilities and specialties;
+* Have a number of different developers working on a product at any given time;
+* On-board new staff regularly;
+* Have a number of codebases that developers dip in and out of.
 
-### `npm run eject`
+# Syntax and formatting
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Two (2) space indents, no tabs.
+2. 80 character wide columns.
+            Reason
+ * The ability to have multiple files open side by side.
+ * Viewing CSS on sites like GitHub, or in terminal windows.
+ * Providing a comfortable line length for comments.
+3. Multi-line CSS.
+4. Meaningful use of whitespace.
+5. Dont use !important in your coding.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# STRINGS
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Unless applied as CSS identifiers, Strings should be quoted using single quotes. URLs should also be quoted. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# NUMBERS
 
-## Learn More
+* Sass makes no distinction between numbers, integers, floats so trailing zeros (0) should be omitted. However, leading zeros (0) help readability and should be added. 
+* A zero (0) length should not have a unit. 
+* Units manipulation should be thought as arithmetic operations, not string operations. 
+* In order to improve readability, top-level calculations should be wrapped in parentheses. Also, complex math operations might be splitted into smaller chunks. 
+* Magic numbers dramatically hurt code maintainability and should be avoided at all time. When in doubt, extensively explain the questionable value. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# COLORS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Colors should be expressed in HSL when possible, then RGB, then hexadecimal (in a lowercase and shortened form). Color keywords should be avoided. 
+* Prefer mix(..) instead of darken(..) and lighten(..) when lightening or darkening a color. 
 
-### Code Splitting
+# LISTS
+* Unless used as a direct mapping to space-separated CSS values, lists should be separated with commas. 
+* Wrapping parentheses should also be considered to improve readability. 
+* Inlined lists should not have a trailing comma, multi-line lists should have it. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# MAPS
 
-### Analyzing the Bundle Size
+* Maps containing more than a single pair are written on several lines. 
+* To help maintainability, the last pair of a map should have a trailing comma. 
+* Map keys that happen to be strings should be quoted as any other string. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# DECLARATION SORTING
 
-### Making a Progressive Web App
+*The system used for declaration sorting (alphabetical, by type, etc.) doesn’t matter as long as it is consistent. ↩
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+# SELECTOR NESTING
 
-### Advanced Configuration
+* Avoid selector nesting when it is not needed (which represents most of the cases). 
+* Use selector nesting for pseudo-classes and pseudo-elements. 
+* Media queries can also be nested inside their relevant selector. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+# BEM Naming Conventions
 
-### Deployment
+Naming conventions in CSS are hugely useful in making your code more strict, more transparent, and more informative.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+This project is making use of BEM-like naming convention.
 
-### `npm run build` fails to minify
+BEM, meaning Block, Element, Modifier, is a front-end methodology coined by developers working at Yandex. Whilst BEM is a complete methodology, here we are only concerned with its naming convention. Further, the naming convention here only is BEM-like; the principles are exactly the same, but the actual syntax differs slightly.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+BEM splits components classes into three groups:
+
+* Block: The sole root of the component.
+* Element: A component part of the Block.
+* Modifier: A variant or extension of the Block.
+
+- Read more on [BEM](http://getbem.com/) 
+
