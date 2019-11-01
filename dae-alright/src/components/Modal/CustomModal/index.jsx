@@ -5,11 +5,9 @@ import "./index.scss";
 import Button from 'react-bootstrap/Button'
 
 const CustomModal = props => {
-  
   return (
     <>
-        
-      <Modal show={show} onHide={handleClose} className="custom-modal">
+      <Modal show={props.show} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
         {props.footer && <Modal.Footer>{props.footer()}</Modal.Footer>}

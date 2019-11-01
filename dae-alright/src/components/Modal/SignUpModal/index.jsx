@@ -28,7 +28,7 @@ const titleJSX = () => (
 
 const bodyJSX = () => (
   <React.Fragment>
-    <form >
+    <form>
       <div className="form-input">
         <input
           type="text"
