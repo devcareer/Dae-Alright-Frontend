@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Footer from './../components/Footer/Footer'
+import Footer from './components/Footer/Footer'
 
 
 class App extends Component {
