@@ -11,10 +11,6 @@ const CustomModal = props => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Sign-Up now
-      </Button>
-
       <Modal show={show} onHide={handleClose} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
