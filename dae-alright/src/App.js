@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
-
 import SignInModal from "./components/Modal/SignInModal";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-<<<<<<< HEAD
 import Footer from './components/Footer/index'
-=======
 import HeaderWraper from "../src/components/Header/HeaderWraper/index"
 import HeaderWraper from "../src/components/Header/HeaderWraper"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-
->>>>>>> change directory to App.css in index.js and App.js
-
 import { connect } from "react-redux"
 
 class App extends Component {
-
   render(){
   return (
 
