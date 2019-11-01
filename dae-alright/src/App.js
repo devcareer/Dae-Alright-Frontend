@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import SignUpModal from "./components/Modal/SignUpModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+<<<<<<< HEAD
+=======
+import HeaderWraper from "../src/components/Header/HeaderWraper/index"
+>>>>>>> Dae alright Header-wrapper latest changes
 
 class App extends Component {
 
@@ -16,8 +20,12 @@ class App extends Component {
 =======
 >>>>>>> Update App.js
     <div className="">
+<<<<<<< HEAD
       <Wrapper />
 >>>>>>> Dae Alright Header-wrapper new changes
+=======
+      <HeaderWraper />
+>>>>>>> Dae alright Header-wrapper latest changes
     </div>
   );
 }
