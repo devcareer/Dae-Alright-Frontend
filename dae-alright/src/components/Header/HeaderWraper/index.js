@@ -12,7 +12,7 @@ function HeaderWraper(props) {
     }
     return (
         <div style={styles}>
-           {props.renderprop}
+           
         </div>
 
     )
