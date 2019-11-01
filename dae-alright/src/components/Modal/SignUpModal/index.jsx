@@ -1,6 +1,6 @@
 import React from "react";
-import CustomModal from "../custom-modal/custom-modal.component";
-import "./signup-modal.styles.scss";
+import CustomModal from "../CustomModal";
+import "./index.scss";
 
 const btnStyles = {
   background: "#D6DB46",
