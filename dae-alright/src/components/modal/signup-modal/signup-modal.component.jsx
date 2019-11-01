@@ -11,6 +11,7 @@ const btnStyles = {
   height: "3em",
   margin: "1em 0"
 };
+
 const inputStyles = {
   borderRadius: 0,
   height: "3em"
