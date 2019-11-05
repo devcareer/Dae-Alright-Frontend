@@ -6,7 +6,7 @@ function Footer() {
     return (
         <footer className="deyAlrightFooterContainer">
             <div className="logoDiv">
-             <img src="https://res.cloudinary.com/dq9utkjw2/image/upload/v1572357304/logo_zrlxud.png" alt="company-logo" className="footerLogo" />
+             <img src="https://res.cloudinary.com/dq9utkjw2/image/upload/v1572357304/logo_zrlxud.png" alt="Dae-Alright-logo" className="footerLogo" />
             </div>
             <div className="deyAlrightFooter">
                 <div className="deyAlrightFooterRow-1">
@@ -14,7 +14,7 @@ function Footer() {
                         <select name="browsers" size="1" className="cityItem1">
                             <option>Select All Cities</option>
                             <option value="chrome">Google Chrome</option>
-                            <option value="safari">Safari</option>
+                            <option value="safari">Safari</option>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                             <option value="explorer">Internet Explorer</option>
                             <option value="firefox">Firefox</option>
                             <option value="opera">Opera</option>
@@ -28,7 +28,7 @@ function Footer() {
                     </div>
                     <div className="cityContainer2">
                         <select name="browsers" size="1" class="row2item1">
-                            <option>Select All Cities</option>
+                            <option>Select All resturants</option>
                             <option value="chrome">Google Chrome</option>
                             <option value="safari">Safari</option>
                             <option value="explorer">Internet Explorer</option>
@@ -49,8 +49,8 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="socialImages">
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
+                        <img className='getApp' src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="downnload app from app store" />
+                        <img  className='getApp' src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="downnload app from google play store" />
                     </div>
                 </div>
             </div>
