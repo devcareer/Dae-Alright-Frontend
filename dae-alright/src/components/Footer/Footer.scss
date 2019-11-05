@@ -33,7 +33,6 @@ select{
 }
 
 .logoDiv{
-    //border: 3px solid black;
     text-align: left;
     padding-left: 150px;
 
@@ -43,7 +42,7 @@ select{
 
     .footerLogo{
         margin-left: 0;
-        //border: 2px solid chocolate;
+        
     }
 }
 
@@ -72,7 +71,7 @@ select{
             width: 45%;
             justify-content: space-between;
             align-items: flex-start;
-            //border: 1px solid red;
+            
 
             @include footer-media-query(1050px){
                 width: 60%;
@@ -119,10 +118,8 @@ select{
 
         .socialImages{
             display: flex;
-            //border: 2px solid black;
             justify-content: space-between;
             margin-top: 20px;
-            width: 40%;
             height: 40px;
 
             @include footer-media-query(600px){
@@ -131,6 +128,12 @@ select{
              }
             img{
                 width: 45%;
+            }
+            .getApp {
+                width: 8rem;
+                height: 2rem;
+                margin: 1rem;
+                cursor: pointer;
             }
         }
         .faqAndContactUs{
