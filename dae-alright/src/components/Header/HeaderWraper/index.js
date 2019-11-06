@@ -21,5 +21,12 @@ HeaderWraper.propTypes = {
     renderProp: propTypes.func
 }
 
+<<<<<<< HEAD
 
 export default HeaderWraper
+=======
+export default HeaderWraper
+
+
+
+>>>>>>> Update index.js
