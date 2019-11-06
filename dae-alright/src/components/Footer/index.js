@@ -54,6 +54,14 @@ function Footer() {
                     </div>
                 </div>
             </div>
+            <div className='terms-and-condition'>
+                <p className='c'>Terms and Conditions 
+                <span className='period'>&middot;</span>
+                <span >Privacy Policy</span>
+                </p>
+                <p className='c'>&#xa9; Copyright 2018 Dae Alright! is a registered trademark</p>
+
+            </div>
         </footer>
     )
 }

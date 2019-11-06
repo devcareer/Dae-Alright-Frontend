@@ -136,6 +136,7 @@ select{
             justify-content: space-between;
             margin-top: 20px;
             height: 40px;
+            
 
             @include footer-media-query(600px){
                 width: 100%;
@@ -162,6 +163,26 @@ select{
         
             }
         }
+    }
+    
+}
+
+.terms-and-condition{
+    display: flex;
+    justify-content: space-between;
+    padding:  15px 0;
+    width: 75%;
+    margin: 0 auto;
+
+    .period {
+        margin: 0 10px;
+        font-size: bold;
+    }
+    .c{
+        cursor: pointer;
+    }
+    @include footer-media-query(600px){
+        flex-direction: column;
     }
     
 }
