@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import SignUpModal from "../components/signup-modal/signup-modal.component";
+import SignUpModal from "./components/Modal/SignUpModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookSquare, faGooglePlusG } from '@fortawesome/free-brands-svg-icons'
-
 class App extends Component {
 
   render(){
@@ -18,3 +15,5 @@ class App extends Component {
 }
 
 }
+
+export default App;
