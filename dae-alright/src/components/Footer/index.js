@@ -85,6 +85,7 @@ function Footer() {
                 <p className='c'>&#xa9; Copyright 2018 Dae Alright! is a registered trademark</p>
 
             </div>
+<<<<<<< HEAD
 =======
                     <div className="row2col1">
                         <ul className="row2item1">
@@ -101,6 +102,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
+>>>>>>> make changes based on feedback
+=======
 >>>>>>> make changes based on feedback
         </footer>
     )

@@ -120,6 +120,7 @@ select{
             justify-content: space-between;
             margin-top: 20px;
             height: 40px;
+            
 
             @include footer-media-query(600px){
                 width: 100%;
