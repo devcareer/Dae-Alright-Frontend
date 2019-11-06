@@ -26,7 +26,10 @@ HeaderWraper.propTypes = {
 export default HeaderWraper
 =======
 export default HeaderWraper
+<<<<<<< HEAD
 
 
 
+>>>>>>> Update index.js
+=======
 >>>>>>> Update index.js
