@@ -23,6 +23,3 @@ HeaderWraper.propTypes = {
 
 
 export default HeaderWraper
-
-
-
