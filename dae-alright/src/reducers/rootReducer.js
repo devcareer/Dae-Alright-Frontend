@@ -1,9 +1,9 @@
 import { combineReducers } from "redux"
-import simpleReducer from "./simpleReducer"
 import restaurantReducer from "./restaurantReducer"
+import userReducer from "./userReducer"
 
 
 export default combineReducers ({
-    simpleReducer,
+    userReducer,
     restaurantReducer
 });
