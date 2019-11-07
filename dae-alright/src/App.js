@@ -1,3 +1,5 @@
+
+import React, { Component } from 'react';
 import React, { Component } from 'react';
 import SignInModal from "./components/Modal/SignInModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,6 +10,18 @@ import HeaderWraper from "../src/components/Header/HeaderWraper"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { connect } from "react-redux"
+import React, { Component } from "react";
+import SignUpModal from "./components/Modal/SignUpModal";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import HeaderWraper from "../src/components/Header/HeaderWraper/index";
+import HeaderWraper from "../src/components/Header/HeaderWraper";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Footer from './../components/Footer/Footer'
+
 
 class App extends Component {
   render(){
@@ -18,9 +32,15 @@ class App extends Component {
       <h1>dae-Alright</h1>
       <SignInModal show={this.props.show} />
       
+  render() {
+    return (
+      <div className="App">
+        <Navigation />
+        <AuthNav />
+      </div>
+    );
+  }
 
-    </div>
-  );
 }
 
 }

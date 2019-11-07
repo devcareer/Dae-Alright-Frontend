@@ -2,7 +2,7 @@ import React from "react";
 import "../Navigation/index.scss";
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
-import AuthNav from "../Navigation/AuthNav";e 
+import AuthNav from "../Navigation/AuthNav"; 
 import { Button } from "react-bootstrap";
 
 const Navigation = props => (
