@@ -18,9 +18,8 @@ import HeaderWraper from "../src/components/Header/HeaderWraper/index";
 import HeaderWraper from "../src/components/Header/HeaderWraper";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Footer from './../components/Footer/Footer'
+import Navigation from './components/Navigation/index'
+import AuthNav from "./components/Navigation/AuthNav"
 
 
 class App extends Component {
