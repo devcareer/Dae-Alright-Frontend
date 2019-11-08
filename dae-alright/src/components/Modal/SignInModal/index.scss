@@ -1,0 +1,53 @@
+.forgot-pswd {
+
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.not-signed-in {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  
+}
+
+.sign-up {
+  color: #D6DB46;
+  &:hover{
+    cursor: pointer;
+  }
+
+}
+
+.form-input {
+  margin: 1em;
+
+}
+
+.isFacebook {
+  background: #276897;
+}
+
+.isGoogle {
+  background: #F34A38;
+}
+
+.welcomeText {
+
+  &__primary {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__secondary{
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+}
+.iconClass{
+  margin-right:0.5rem;
+}

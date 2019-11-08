@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SignUpModal from "./components/Modal/SignUpModal";
+import SignInModal from "./components/Modal/SignInModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
   return (
     <div className="App">
       <h1>dae-Alright</h1>
-      <SignUpModal />
+      <SignInModal show={this.props.show} />
       
     </div>
   );
