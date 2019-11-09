@@ -70,7 +70,7 @@ const bodyJSX = () => (
       </p>
       <div className="btnCollection">
         <Button
-          className="isFacebook"
+          className="facebook-button"
           text={" Sign Up With Facebook"}
           style={btnColorStyles}
           icons={
@@ -82,7 +82,7 @@ const bodyJSX = () => (
           }
         />
         <Button
-          className="isGoogle"
+          className="google-button"
           text={" Sign Up With Google"}
           style={btnColorStyles}
           icons={
