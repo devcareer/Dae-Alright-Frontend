@@ -15,11 +15,9 @@ const CustomModal = props => {
     </>
   );
 };
-
 CustomModal.propTypes = {
-  title: PropTypes.func.isRequired,
-  body: PropTypes.func.isRequired,
-  footer: PropTypes.func
+ title: PropTypes.func.isRequired,
+ body: PropTypes.func.isRequired,
+ footer: PropTypes.func
 };
-
 export default CustomModal;
