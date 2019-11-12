@@ -1,18 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
-.nav-bar {
-  border: 1px solid grey;
-  margin: 4%;
-  padding: 0 2%;
-}
 
-ul {
-  list-style: none;
+.mr-auto{
+  width: 100%;
+  border: 1px solid grey;
   display: flex;
   justify-content: space-around;
-  padding: 1% 2% 0 2%;
-}
 
+}
 .nav-link {
   font-family: "Roboto", sans-serif;
   color: grey;
@@ -37,30 +32,16 @@ ul {
   background-color: #d6db46;
   width: 30%;
 }
-@media screen and (max-width: 440px) {
-  .nav-bar {
+@media screen and (min-width: 440px) and (max-width: 740px) {
+  .mr-auto {
     border: none;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: justify;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .nav-bar {
+@media screen and (min-width: 120px) and (max-width: 440px) {
+  .mr-auto {
     border: none;
   }
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: justify;
-    font-size: 0.8rem;
-  }
-
   .nav-link {
     font-family: "Roboto", sans-serif;
     color: grey;
@@ -84,8 +65,9 @@ ul {
   }
 }
 
-@media screen and (min-width: 720px) {
-  .nav-link{
-    font-size: 12px;
+@media screen and ( min-width: 740px) and (max-width: 990px){
+
+  .mr-auto{
+    border: none;
   }
 }
