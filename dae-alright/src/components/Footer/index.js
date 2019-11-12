@@ -75,8 +75,7 @@ function Footer() {
                         <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
                         <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
                     </div>
-                </div>
-            </div>
+        
         </footer>
     )
 }
