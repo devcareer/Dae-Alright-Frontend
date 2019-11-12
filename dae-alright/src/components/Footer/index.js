@@ -6,7 +6,6 @@ function Footer() {
     return (
         <footer className="deyAlrightFooterContainer">
             <div className="logoDiv">
-<<<<<<< HEAD
              <img src="https://res.cloudinary.com/dq9utkjw2/image/upload/v1572357304/logo_zrlxud.png" alt="Dae-Alright-logo" className="footerLogo" />
             </div>
             <div className="deyAlrightFooter">
@@ -16,41 +15,20 @@ function Footer() {
                             <option>Select All Cities</option>
                             <option value="chrome">Google Chrome</option>
                             <option value="safari">Safari</option>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-=======
-             <img src="https://res.cloudinary.com/dq9utkjw2/image/upload/v1572357304/logo_zrlxud.png" alt="company-logo" className="footerLogo" />
-            </div>
-            <div className="deyAlrightFooter">
-                <div className="deyAlrightFooterRow-1">
-                    <div className="row1col1">
-                        <select name="browsers" size="1" className="row1item1">
-                            <option>Select All Cities</option>
-                            <option value="chrome">Google Chrome</option>
-                            <option value="safari">Safari</option>
->>>>>>> make changes based on feedback
                             <option value="explorer">Internet Explorer</option>
                             <option value="firefox">Firefox</option>
                             <option value="opera">Opera</option>
                             <option value="brave">Brave </option>
                         </select>
-<<<<<<< HEAD
                         <ul className="cityItem2">
-=======
-                        <ul className="row1item2">
->>>>>>> make changes based on feedback
                          <li><a href="footer.js">About Dae alright</a></li>
                          <li><a href="footer.js">Become a delivery partner</a></li>
                          <li><a href="footer.js">Become a business partner</a></li>
                         </ul>
                     </div>
-<<<<<<< HEAD
                     <div className="cityContainer2">
                         <select name="browsers" size="1" class="row2item1">
                             <option>Select All resturants</option>
-=======
-                    <div className="row1col2">
-                        <select name="browsers" size="1" class="row2item1">
-                            <option>Select All Cities</option>
->>>>>>> make changes based on feedback
                             <option value="chrome">Google Chrome</option>
                             <option value="safari">Safari</option>
                             <option value="explorer">Internet Explorer</option>
@@ -61,7 +39,6 @@ function Footer() {
                     </div>
                 </div>
                 <div className="deyAlrightFooterRow-2">
-<<<<<<< HEAD
                     <div className="faqAndContactUs">
                         <ul className="faqBlog">
                               <li><a href="footer.js">FAQs</a></li>
@@ -85,8 +62,6 @@ function Footer() {
                 <p className='c'>&#xa9; Copyright 2018 Dae Alright! is a registered trademark</p>
 
             </div>
-<<<<<<< HEAD
-=======
                     <div className="row2col1">
                         <ul className="row2item1">
                               <li><a href="footer.js">FAQs</a></li>
@@ -102,9 +77,6 @@ function Footer() {
                     </div>
                 </div>
             </div>
->>>>>>> make changes based on feedback
-=======
->>>>>>> make changes based on feedback
         </footer>
     )
 }
