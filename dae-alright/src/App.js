@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import SignInModal from "./components/Modal/SignInModal";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Footer from './components/Footer/index'
@@ -11,8 +13,11 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Footer />
-    
+
+      <h1>dae-Alright</h1>
+      <SignInModal show={this.props.show} />
+      
+
     </div>
   );
 }
