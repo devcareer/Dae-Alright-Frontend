@@ -1,0 +1,62 @@
+.hamburger {
+  display: flex;
+}
+.shopping-cart {
+  margin-left: 50%;
+}
+.navi-text {
+  background-color: #d6db46;
+  color: #fff;
+  border-radius: 0;
+  font-weight: 500;
+  border: 0;
+  text-align: center;
+  border: none;
+  &:hover {
+    background-color: darken($color: #d6db46, $amount: 10);
+  }
+}
+
+@media screen and (max-width: 440px) {
+}
+
+@media screen and (width: 320px) {
+  .navi-text {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    height: 20%;
+    font-size: 1px;
+  }
+  .shopping-cart {
+    position: relative;
+    left: 8%;
+    top: 24%;
+    // display: none;
+  }
+}
+@media screen and (max-width: 440px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+  .navi-text {
+    left: 72%;
+    position: absolute;
+    bottom: 8%;
+    width: 20%;
+    font-size: 9px;
+    text-align: left;
+    bottom: 20%;
+  }
+
+  .shopping-cart {
+    right: 15%;
+    position: absolute;
+    top: 20%;
+  }
+}

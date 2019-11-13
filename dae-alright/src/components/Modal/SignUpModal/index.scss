@@ -1,20 +1,15 @@
-   
-    h2,h6 {
-        color:rgba(0, 0, 0, 0.6);
-        margin-top: 1em;
-    }
-    
-    form {
-       padding:0  1.5em;
-       .form-input {
-           margin: 1em;
-           
-       }
-       span {
-           color: #D6DB46;
-       }
-       
-       
-    }
-   
+h2,
+h6 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1em;
+}
 
+form {
+  padding: 0 1.5em;
+  .form-input {
+    margin: 1em;
+  }
+  span {
+    color: #d6db46;
+  }
+}
