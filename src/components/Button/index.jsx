@@ -16,7 +16,5 @@ const Button = ({text, style, icons, className}) => (
 )
 Button.propType = {
   className: PropTypes.string,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };
-
-export default Button;
