@@ -150,20 +150,12 @@ this.props.signInError && <div className='alert alert-danger' >{this.props.signI
         />
       </div>
     </div>
- 
   </React.Fragment>
 );
 return <CustomModal show={this.props.showSignIn} title={titleJSX} body={bodyJSX} />;
 }
 
 };
-const mapStateToProps =(state)=>{
- 
-  const {signInError, signInLoading, signInSuccess, showSignIn} = state.userReducer
-  return {
-    signInError,
-    signInLoading,
-    signInSuccess,
     showSignIn
   }
 }
