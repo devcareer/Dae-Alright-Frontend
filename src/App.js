@@ -7,6 +7,7 @@ import AuthNav from "./components/Navigation/AuthNav"
 import SearchBar from './components/SearchBar';
 
 
+import SignIn from './components/Modal/SignInModal'
 
 class App extends Component {
 
@@ -14,9 +15,11 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Navigation />
-      <AuthNav />
-      <SearchBar /> 
+     <Navigation/>
+     <AuthNav/>
+     <SignIn/>
+     
+    
     </div>
   
   );
