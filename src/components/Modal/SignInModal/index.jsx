@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {connect} from 'react-redux'
 import CustomModal from "../CustomModal";
 import "./index.scss";
 import Button from "../../Button";
@@ -14,25 +13,64 @@ import { signIn } from '../../../redux/actions/user.signin'
 class SignInModal extends Component {
   constructor(){
     super()
+
     this.state={
-      email: '',
-      password: ''
+      SignInEmail: '',
+      SignInPassword: ''
     }
   }
   
   onEmailChange = e =>{
-    this.setState({email: e.target.value})
+    this.setState({SignInEmail: e.target.value})
     
   }
   onPasswordChange = e =>{
-    this.setState({password: e.target.value})
+    this.setState({SignInPassword: e.target.value})
     
   }
   
-  onloginSubmit=(e)=>{
+  onloginSubmit=async (e)=>{
     e.preventDefault()
-   this.props.signIn(this.state.password,this.state.email)
-   
+   const {SignInEmail, SignInPassword} = this.state;
+    const showAlert=(message, className)=> {
+      
+      const alert = document.createElement('alert');
+      alert.className = `alert ${className}`;
+      alert.appendChild(document.createTextNode(message));
+      const container = document.querySelector('.form-container');
+      const form = document.querySelector('.form');
+      container.insertBefore(alert, form);
+    }
+    if(SignInEmail && SignInPassword){
+     let error = document.querySelector('.alert')
+     console.log('Error!', error)
+     if (error){
+        error.remove()
+     }
+      
+      await fetch('https://dae-alright-staging.herokuapp.com/auth/signin',{
+      method: 'post',
+      headers:{'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.SignInEmail,
+        password: this.state.SignInPassword
+      })
+    })
+    .then(response=> response.json())
+    .then(response=> {
+      if(response.status==='success'){
+        console.log('Welldone Genius you rememebered your login credentials!')
+
+      }
+      else
+      showAlert('Incorrect Email or Password', alert)
+      }
+    
+    )
+  }
+else{
+    showAlert('Please Fill in all fields', alert)
+}
   }
 
   
@@ -70,9 +108,8 @@ const titleJSX = () => (
 
 const bodyJSX = () => (
   <React.Fragment>
-     <div className='form'>
-{this.props.signInError && <div className='alert alert-danger' >{this.props.signInError }</div>}
-{this.props.signInSuccess && <div className="alert alert-success">{this.props.signInSuccess}</div>}
+     <div className="form-container">
+    <div className='form'>
       <div className="form-input">
         <input
           type="text"
@@ -116,9 +153,7 @@ const bodyJSX = () => (
       >
         Login
         
-      </button>)}
-      
-      
+      </button>
       <p className="not-signed-in">
         Not Signed In? <span className="sign-up">Sign Up</span>
       </p>
@@ -149,12 +184,11 @@ const bodyJSX = () => (
         />
       </div>
     </div>
- 
+    </div>
   </React.Fragment>
 );
-return <CustomModal show={this.props.showSignIn} title={titleJSX} body={bodyJSX} />;
+return <CustomModal title={titleJSX} body={bodyJSX} />;
 }
-
 };
 const mapStateToProps =(state)=>{
  
@@ -168,4 +202,4 @@ const mapStateToProps =(state)=>{
 }
 
 
-export default connect(mapStateToProps, {signIn})(SignInModal)
+export default SignInModal
