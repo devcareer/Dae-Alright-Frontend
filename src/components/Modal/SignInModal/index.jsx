@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import CustomModal from "../CustomModal";
 import "./index.scss";
 import Button from "../../Button";
@@ -8,6 +8,74 @@ import {
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
 
+
+class SignInModal extends Component {
+  constructor(){
+    super()
+
+    this.state={
+      SignInEmail: '',
+      SignInPassword: ''
+    }
+  }
+  
+  onEmailChange = e =>{
+    this.setState({SignInEmail: e.target.value})
+    
+  }
+  onPasswordChange = e =>{
+    this.setState({SignInPassword: e.target.value})
+    
+  }
+  
+  onloginSubmit=async (e)=>{
+    e.preventDefault()
+   const {SignInEmail, SignInPassword} = this.state;
+    const showAlert=(message, className)=> {
+      
+      const alert = document.createElement('alert');
+      alert.className = `alert ${className}`;
+      alert.appendChild(document.createTextNode(message));
+      const container = document.querySelector('.form-container');
+      const form = document.querySelector('.form');
+      container.insertBefore(alert, form);
+    }
+    if(SignInEmail && SignInPassword){
+     let error = document.querySelector('.alert')
+     console.log('Error!', error)
+     if (error){
+        error.remove()
+     }
+      
+      await fetch('https://dae-alright-staging.herokuapp.com/auth/signin',{
+      method: 'post',
+      headers:{'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.SignInEmail,
+        password: this.state.SignInPassword
+      })
+    })
+    .then(response=> response.json())
+    .then(response=> {
+      if(response.status==='success'){
+        console.log('Welldone Genius you rememebered your login credentials!')
+
+      }
+      else
+      showAlert('Incorrect Email or Password', alert)
+      }
+    
+    )
+  }
+else{
+    showAlert('Please Fill in all fields', alert)
+}
+  }
+
+  
+
+render(){
+  
 const btnStyles = {
   background: "#D6DB46",
   borderRadius: 0,
@@ -39,22 +107,28 @@ const titleJSX = () => (
 
 const bodyJSX = () => (
   <React.Fragment>
-    <form>
+     <div className="form-container">
+    <div className='form'>
       <div className="form-input">
         <input
           type="text"
           placeholder="Email"
           className="form-control"
+          required
           style={inputStyles}
+          onChange={this.onEmailChange}
         />
       </div>
 
       <div className="form-input">
         <input
+          
           type="password"
           placeholder="Password"
           className="form-control"
           style={inputStyles}
+          required
+          onChange={this.onPasswordChange}
         />
       </div>
       <p className="forgot-pswd">Forgot Password?</p>
@@ -62,8 +136,10 @@ const bodyJSX = () => (
         style={btnStyles}
         className="btn 
              bnt-lg form-control"
+             onClick={this.onloginSubmit}
       >
         Login
+        
       </button>
       <p className="not-signed-in">
         Not Signed In? <span className="sign-up">Sign Up</span>
@@ -80,8 +156,8 @@ const bodyJSX = () => (
               className="iconClass"
             />
           }
-        />
-        <Button
+        /> 
+         <Button
           className="google-button"
           text={" Sign Up With Google"}
           style={btnColorStyles}
@@ -94,12 +170,12 @@ const bodyJSX = () => (
           }
         />
       </div>
-    </form>
+    </div>
+    </div>
   </React.Fragment>
 );
-
-const SignInModal = ({ user }) => {
-  return <CustomModal title={titleJSX} body={bodyJSX} />;
+return <CustomModal title={titleJSX} body={bodyJSX} />;
+}
 };
 
-export default SignInModal;
+export default SignInModal
