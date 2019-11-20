@@ -4,9 +4,7 @@ import './App.css';
 import { connect } from "react-redux"
 import Navigation from './components/Navigation/index'
 import AuthNav from "./components/Navigation/AuthNav"
-
-import ForgotPasswordModal from "./components/Modal/ForgotPasswordModal";
-
+import SignIn from './components/Modal/SignInModal'
 
 class App extends Component {
 
@@ -14,9 +12,11 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Navigation />
-      <AuthNav />
-      <ForgotPasswordModal /> 
+     <Navigation/>
+     <AuthNav/>
+     <SignIn/>
+     
+    
     </div>
   
   );
