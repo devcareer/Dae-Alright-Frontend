@@ -7,12 +7,18 @@ import "./index.scss";
 import Button from 'react-bootstrap/Button' 
 
 
+const CustomModal = props => {
+  const [show, setShow] = useState(false);
 
- const CustomModal = props => {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      
-      <Modal show={props.show} className="custom-modal">
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+      <Modal show={show} onHide={handleClose} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
         {props.footer && <Modal.Footer>{props.footer()}</Modal.Footer>}
