@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import CustomModal from "../CustomModal";
 import "./index.scss";
+import { signUp } from "../../../redux/actions/user";
 
 const btnStyles = {
   background: "#D6DB46",
@@ -25,42 +27,19 @@ class SignUpModal extends Component {
       lastName: "",
       email: "",
       password: "",
-      phone: "",
-      isSubmit: false
+      phone: ""
     };
   }
 
-  handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
-
   handleSignUpButton = event => {
     event.preventDefault();
-    this.setState({ isSubmit: true });
-    fetch("https://dae-alright-staging.herokuapp.com/auth/signup", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
-        email: this.state.email,
-        password: this.state.password,
-        phone: this.state.phone
-      })
-    })
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ isSubmit: false });
-        console.log(data);
-      })
-      .catch(error => {
-        this.setState({ isSubmit: false });
-        console.log(error);
-      });
+    this.props.signUp(
+      this.state.firstName,
+      this.state.lastName,
+      this.state.email,
+      this.state.password,
+      this.state.phone
+    );
   };
 
   titleJSX = () => (
@@ -75,6 +54,12 @@ class SignUpModal extends Component {
   bodyJSX = () => (
     <React.Fragment>
       <form>
+        {this.props.signUpError && (
+          <div className="alert alert-danger ">{this.props.signUpError}</div>
+        )}
+        {this.props.signUpSuccess && (
+          <div className="alert alert-success">{this.props.signUpSuccess}</div>
+        )}
         <div className="form-input">
           <input
             type="text"
@@ -82,9 +67,9 @@ class SignUpModal extends Component {
             className="form-control"
             style={inputStyles}
             required
-            name="firstName"
-            value={this.state.firstName}
-            onChange={event => this.handleChange(event)}
+            onChange={event => {
+              this.setState({ firstName: event.target.value });
+            }}
           />
         </div>
         <div className="form-input">
@@ -94,9 +79,9 @@ class SignUpModal extends Component {
             className="form-control"
             style={inputStyles}
             required
-            name="lastName"
-            value={this.state.lastName}
-            onChange={event => this.handleChange(event)}
+            onChange={event => {
+              this.setState({ lastName: event.target.value });
+            }}
           />
         </div>
         <div className="form-input">
@@ -106,9 +91,9 @@ class SignUpModal extends Component {
             className="form-control"
             style={inputStyles}
             required
-            name="email"
-            value={this.state.email}
-            onChange={event => this.handleChange(event)}
+            onChange={event => {
+              this.setState({ email: event.target.value });
+            }}
           />
         </div>
         <div className="form-input">
@@ -118,9 +103,9 @@ class SignUpModal extends Component {
             className="form-control"
             style={inputStyles}
             required
-            name="password"
-            value={this.state.password}
-            onChange={event => this.handleChange(event)}
+            onChange={event => {
+              this.setState({ password: event.target.value });
+            }}
           />
         </div>
         <div className="form-input">
@@ -130,18 +115,19 @@ class SignUpModal extends Component {
             className="form-control"
             style={inputStyles}
             required
-            name="phone"
-            value={this.state.phone}
-            onChange={event => this.handleChange(event)}
+            onChange={event => {
+              this.setState({ phone: event.target.value });
+            }}
           />
         </div>
-        {this.state.isSubmit ? (
+        {this.props.signUpLoader ? (
           <button
             style={btnStyles}
+            disabled
             className="btn 
         bnt-lg form-control"
           >
-            Please wait ...
+            <div class="loader"></div>
           </button>
         ) : (
           <button
@@ -164,5 +150,13 @@ class SignUpModal extends Component {
     return <CustomModal title={this.titleJSX} body={this.bodyJSX} />;
   }
 }
+const mapStateToProps = state => {
+  const { signUpError, signUpSuccess, signUpLoader } = state.userReducer;
+  return {
+    signUpError,
+    signUpLoader,
+    signUpSuccess
+  };
+};
 
-export default SignUpModal;
+export default connect(mapStateToProps, { signUp })(SignUpModal);

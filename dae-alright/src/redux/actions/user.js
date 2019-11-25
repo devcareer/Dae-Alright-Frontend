@@ -1,44 +1,69 @@
-import { SIGNIN_ACTION, SIGNIN_ACTION_FAIL } from '../constants/actionTypes'
+import {
+  SIGNUP_ACTION,
+  SIGNUP_ACTION_FAIL,
+  SIGNUP_ACTION_SUCCESS,
+  SIGNUP_ACTION_LOADING
+} from "../constants/actionTypes";
 
-const signInAction = (payload) => {
+const signUpAction = payload => {
   return {
-    type: SIGNIN_ACTION,
+    type: SIGNUP_ACTION,
     user: payload.user,
     token: payload.token
-  }
-}
+  };
+};
 
-const signInActionFail = (message) => {
+const signUpActionFail = message => {
   return {
-    type: SIGNIN_ACTION_FAIL,
+    type: SIGNUP_ACTION_FAIL,
     message
-  }
-}
+  };
+};
 
-export const signIn = (password,email) => {
-  console.log(process.env)
-  return async (dispatch) => {
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signin`,{
-      method: 'post',
-      headers:{'Content-Type': 'application/json'},
+const signUpActionSuccess = message => {
+  return {
+    type: SIGNUP_ACTION_SUCCESS,
+    message
+  };
+};
+
+const signUpLoading = signUpLoader => {
+  return {
+    type: SIGNUP_ACTION_LOADING,
+    signUpLoader
+  };
+};
+
+export const signUp = (firstName, lastName, email, password, phone) => {
+  return async dispatch => {
+    dispatch(signUpLoading(true));
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
+        firstName,
+        lastName,
         email,
-        password
+        password,
+        phone
       })
     })
-    .then(response=> response.json())
-    .then(response=> {
-
-      if(response.status==='success'){
-        console.log('Welldone Genius you rememebered your login credentials!');
-        document.querySelector('.submit').disabled = true;
-        dispatch(signInAction(response.data))
-
-      }
-      else {
-        dispatch(signInActionFail('Incorrect Email or Password'))
-      }
-    
-  
-  })
-}}
+      .then(response => response.json())
+      .then(response =>
+        response.status === "success"
+          ? (dispatch(signUpAction(response.data)),
+            dispatch(
+              signUpActionSuccess("Your account has been created successfully!")
+            ),
+            setTimeout(() => {
+              window.location.reload(true);
+            }, 3000))
+          : (dispatch(signUpActionFail(response.message)),
+            setTimeout(() => {
+              window.location.reload(true);
+            }, 2000))
+      );
+  };
+};

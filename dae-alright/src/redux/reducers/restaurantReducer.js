@@ -1,4 +1,4 @@
-import SAMPLE_ACTION from "../constants/actionTypes"
+import {SAMPLE_ACTION} from "../constants/actionTypes"
 
 
 const initialState = {}
