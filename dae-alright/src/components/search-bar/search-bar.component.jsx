@@ -9,8 +9,7 @@ class SearchBar extends React.Component {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
-        // this.handleChangeSearch = this.handleChangeSearch.bind(this);
-        // this.handleChangeFilter = this.handleChangeFilter.bind(this);       
+               
 
         this.state = {
             cities: [{
@@ -67,21 +66,8 @@ class SearchBar extends React.Component {
            isFindFood: true
        })
    }
-
-    // handleChangeSearch(props) {
-    //     let x = props.find(prop => prop.food.toLowerCase() === this.state.searchFood.toLowerCase());
-    //     console.log(x)
-    // }
-
-    // handleChangeFilter(props) {
-    //     let y = props.filter(prop => prop.food.toLowerCase().includes(this.state.searchFood.toLowerCase()));
-    //     console.log(y)
-    // }
-
     
-
     render() {
-            // const isFindFood = this.state.isFindFood;
             const {cities, locations, isFindFood, sortList} = this.state;
 
             let show = [];
@@ -93,12 +79,9 @@ class SearchBar extends React.Component {
                     <ButtonSearch text='Find Food' onClick={this.handleClick} />,
                     <InputSearch 
                         placeholder='Search' 
-                        // onCompositionEnd={this.handleChangeSearch(foodData)} 
-                        // onChange={this.handleChangeSearch(foodData)}
                         />,
                     <InputSearch 
                         placeholder='Filter'
-                        // onChange={this.handleChangeFilter(foodData)}
                         />,
                     <SearchDropDown places={sortList} text='sort'/>
                 ]
