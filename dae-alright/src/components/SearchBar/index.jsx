@@ -1,8 +1,8 @@
 import React from 'react';
-import './search-bar.style.scss';
-import SearchDropDown from './component/dropdown/search.dropdown.component';
-import ButtonSearch from './component/button/button.component';
-import InputSearch from './component/input/input.component';
+import './style.scss';
+import SearchDropDown from './components/DropDown/index';
+import ButtonSearch from './components/Button/index';
+import InputSearch from './components/Input/index';
 
 class SearchBar extends React.Component {
     constructor(props) {
