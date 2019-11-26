@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,gBAAgB,EAAE,0GAA0G;EAC5H,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,iBAAiB,EAAE,SAAS;EAC5B,mBAAmB,EAAE,KAAK;CAC7B",
-    "sources": [
-        "HeaderWraper.scss"
-    ],
-    "names": [],
-    "file": "HeaderWraper.css"
-}
