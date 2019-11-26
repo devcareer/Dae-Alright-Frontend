@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
 import "./index.scss";
 
 const CustomModal = props => {
+  
   return (
     <>
+     
       <Modal show={props.show} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
