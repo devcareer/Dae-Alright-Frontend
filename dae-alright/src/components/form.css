@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 600px;
+    height: 600px;
+    margin-left: 30%;
+    padding: 10px;
+}
+input {
+    margin-left: 10%;
+    width: 100px;
+}
+
