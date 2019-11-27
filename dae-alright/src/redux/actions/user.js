@@ -2,7 +2,8 @@ import {
   SIGNUP_ACTION,
   SIGNUP_ACTION_FAIL,
   SIGNUP_ACTION_SUCCESS,
-  SIGNUP_ACTION_LOADING
+  SIGNUP_ACTION_LOADING,
+  TOGGLE_SIGNUP
 } from "../constants/actionTypes";
 
 const signUpAction = payload => {
@@ -33,11 +34,17 @@ const signUpLoading = signUpLoader => {
     signUpLoader
   };
 };
+ export const toggleSignUp = (showSignUp) => {
+  return {
+    type: TOGGLE_SIGNUP,
+    showSignUp
+  }
+}
 
 export const signUp = (firstName, lastName, email, password, phone) => {
   return async dispatch => {
     dispatch(signUpLoading(true));
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json"

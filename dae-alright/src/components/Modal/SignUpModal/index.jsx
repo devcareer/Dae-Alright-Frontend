@@ -127,7 +127,7 @@ class SignUpModal extends Component {
             className="btn 
         bnt-lg form-control"
           >
-            <div class="loader"></div>
+            <div className="loader"></div>
           </button>
         ) : (
           <button
@@ -147,15 +147,16 @@ class SignUpModal extends Component {
   );
 
   render() {
-    return <CustomModal title={this.titleJSX} body={this.bodyJSX} />;
+    return <CustomModal show={this.props.showSignUp}  title={this.titleJSX} body={this.bodyJSX} />;
   }
 }
 const mapStateToProps = state => {
-  const { signUpError, signUpSuccess, signUpLoader } = state.userReducer;
+  const { signUpError, signUpSuccess, signUpLoader, showSignUp } = state.userReducer;
   return {
     signUpError,
     signUpLoader,
-    signUpSuccess
+    signUpSuccess,
+    showSignUp
   };
 };
 

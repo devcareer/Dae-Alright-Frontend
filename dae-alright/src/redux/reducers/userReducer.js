@@ -4,6 +4,7 @@ import {
   SIGNUP_ACTION_SUCCESS,
   SAMPLE_ACTION,
   SIGNUP_ACTION_LOADING,
+  TOGGLE_SIGNUP
 } from "../constants/actionTypes";
 
 const initialState = {
@@ -20,7 +21,8 @@ const initialState = {
   token: "",
   signUpError: "",
   signUpSuccess: "",
-  signUpLoader: false
+  signUpLoader: false,
+  showSignUp: false
 };
 
 export default (state = initialState, action) => {
@@ -55,6 +57,11 @@ export default (state = initialState, action) => {
         ...state,
         signUpLoader: action.signUpLoader
     }
+    case TOGGLE_SIGNUP:
+      return {
+        ...state,
+        showSignUp: action.showSignUp
+      }
 
     default:
       return state;

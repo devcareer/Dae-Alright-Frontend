@@ -1,16 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import "../Navigation/index.scss";
 import logo from "../../assets/logo.svg";
 import cart from "../../assets/cart.svg";
 import AuthNav from "../Navigation/AuthNav";
-import SignUpModal from "../Modal/SignUpModal";
 import { Button } from "react-bootstrap";
-
-// const [show, setShow] = useState(false);
-
-// const handleClose = () => setShow(false);
-// const handleShow = () => setShow(true);
-
+import SignUpModal from "../Modal/SignUpModal";
+import { connect } from "react-redux";
+import { toggleSignUp } from "../../redux/actions/user";
 
 const Navigation = props => (
   <div className="navigation">
@@ -27,8 +23,13 @@ const Navigation = props => (
 
       <img src={cart} className="shopping-cart" alt="shopping-bag" />
       {!props.isAuthenticated ? (
-        <Button variant="primary"  size="sm" className="navi-text">
-          <SignUpModal />
+        <Button
+          variant="primary"
+          size="sm"
+          className="navi-text"
+          onClick={() => props.toggleSignUp(true)}
+        >
+          <SignUpModal  />
           LOGIN/SIGNUP
         </Button>
       ) : (
@@ -38,4 +39,11 @@ const Navigation = props => (
   </div>
 );
 
-export default Navigation;
+const maStateToProps = state => {
+  const { showSignUp } = state.userReducer;
+  return {
+    showSignUp
+  };
+};
+
+export default connect(maStateToProps, { toggleSignUp })(Navigation);
