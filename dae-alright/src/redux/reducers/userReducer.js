@@ -1,10 +1,10 @@
 import {
-  SIGNUP_ACTION,
-  SIGNUP_ACTION_FAIL,
-  SIGNUP_ACTION_SUCCESS,
+  SIGNIN_ACTION_SUCCESS,
+  SIGNIN_ACTION_FAIL,
   SAMPLE_ACTION,
-  SIGNUP_ACTION_LOADING,
-  TOGGLE_SIGNUP
+  SIGNIN_ACTION,
+  SIGNIN_ACTION_LOADING,
+  TOGGLE_SIGNIN
 } from "../constants/actionTypes";
 
 const initialState = {
@@ -13,16 +13,16 @@ const initialState = {
     createdAt: "",
     email: "",
     firstName: "",
-    id: "",
     lastName: "",
     phone: "",
+    id: "",
     updatedAt: ""
   },
   token: "",
-  signUpError: "",
-  signUpSuccess: "",
-  signUpLoader: false,
-  showSignUp: false
+  signInError: "",
+  signInLoader: false,
+  signInSuccess: "",
+  showSignIn: false
 };
 
 export default (state = initialState, action) => {
@@ -30,39 +30,39 @@ export default (state = initialState, action) => {
     case SAMPLE_ACTION:
       return action.payload;
 
-    case SIGNUP_ACTION:
+    case SIGNIN_ACTION:
       return {
         ...state,
         user: action.user,
         token: action.token,
-        signUpError: "",
-        signUpSuccess: "",
-        signUpLoader: true
+        signInError: "",
+        signInLoader: true,
+        signInSuccess: ""
       };
-    case SIGNUP_ACTION_FAIL:
+    case SIGNIN_ACTION_FAIL:
       return {
         ...state,
-        signUpError: action.message,
-        signUpLoader: false
+        signInError: action.message,
+        signInLoader: false,
+        user: ''
+      };
+    case SIGNIN_ACTION_SUCCESS:
+      return {
+        ...state,
+        signInError: action.message,
+        signInLoader: false
       };
 
-    case SIGNUP_ACTION_SUCCESS:
+    case SIGNIN_ACTION_LOADING:
       return {
         ...state,
-        signUpSuccess: action.message,
-        signUpLoader: false
-      }
-    case SIGNUP_ACTION_LOADING: 
-    return {
-        ...state,
-        signUpLoader: action.signUpLoader
-    }
-    case TOGGLE_SIGNUP:
-      return {
-        ...state,
-        showSignUp: action.showSignUp
-      }
-
+        signInLoading: action.loader
+      };
+      case TOGGLE_SIGNIN:
+          return{
+              ...state,
+              showSignIn:action.showSignIn
+          }
     default:
       return state;
   }
