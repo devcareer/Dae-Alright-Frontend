@@ -8,7 +8,7 @@ import {
   faFacebookSquare,
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
-import { signIn } from '../../../redux/actions/user.signin'
+import { signIn } from '../../../redux/actions/user'
 
 
 class SignInModal extends Component {
