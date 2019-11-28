@@ -1,25 +1,18 @@
 
 
-import React, {useState} from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Modal from "react-bootstrap/Modal";
 import "./index.scss";
-import Button from 'react-bootstrap/Button' 
 
 
 const CustomModal = props => {
-  const [show, setShow] = useState(false);
 
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
 
   return (
     <>
-     <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-        <Modal.Header closeButton></Modal.Header>
-      <Modal show={show} className="custom-modal">
+    
+      <Modal show={props.show} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
         {props.footer && <Modal.Footer>{props.footer()}</Modal.Footer>}

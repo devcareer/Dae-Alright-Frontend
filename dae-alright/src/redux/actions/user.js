@@ -1,44 +1,73 @@
-import { SIGNIN_ACTION, SIGNIN_ACTION_FAIL } from '../constants/actionTypes'
+import {
+  SIGNIN_ACTION_SUCCESS,
+  SIGNIN_ACTION_FAIL,
+  SIGNIN_ACTION_LOADING,
+  TOGGLE_SIGNIN
+} from "../constants/actionTypes";
 
-const signInAction = (payload) => {
+const signInAction = payload => {
   return {
-    type: SIGNIN_ACTION,
+    type: SIGNIN_ACTION_SUCCESS,
     user: payload.user,
     token: payload.token
-  }
-}
+  };
+};
 
-const signInActionFail = (message) => {
+const signInActionFail = message => {
   return {
     type: SIGNIN_ACTION_FAIL,
     message
-  }
-}
+  };
+};
 
-export const signIn = (password,email) => {
-  console.log(process.env)
-  return async (dispatch) => {
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signin`,{
-      method: 'post',
-      headers:{'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        email,
-        password
+const signInActionSuccess = message => {
+  return {
+    type: SIGNIN_ACTION_SUCCESS,
+    message
+  };
+};
+const signInLoading = loader => {
+  return {
+    type: SIGNIN_ACTION_LOADING,
+    loader
+  };
+};
+ export const toggleSignIn = showSignIn => {
+  return {
+    type: TOGGLE_SIGNIN,
+    showSignIn
+  };
+};
+
+
+export const signIn = (password, email) => {
+  return async dispatch => {
+    if (email && password) {
+      dispatch(signInLoading(true));
+      await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          password
+        })
       })
-    })
-    .then(response=> response.json())
-    .then(response=> {
-
-      if(response.status==='success'){
-        console.log('Welldone Genius you rememebered your login credentials!');
-        document.querySelector('.submit').disabled = true;
-        dispatch(signInAction(response.data))
-
-      }
-      else {
-        dispatch(signInActionFail('Incorrect Email or Password'))
-      }
-    
-  
-  })
-}}
+        .then(response => response.json())
+        .then(response =>
+          response.status === "success"
+            ? (console.log(
+                "Welldone Genius you rememebered your login credentials!"
+              ),
+              dispatch(signInAction(response.data)),
+              dispatch(signInActionSuccess("Login Success!")),
+              setTimeout(() => {
+                window.location.reload(true);
+              }, 3000))
+            : dispatch(signInActionFail("Invalid Email or Password")),
+              
+        );
+    } else {
+      dispatch(signInActionFail("Please fill all fields"));
+    }
+  };
+};
