@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.food-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 80%;
+  padding-left: 4%;
+}
+.food-category {
+    font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  background-color: #d6db46;
+  padding: 1%;
+  text-align: center;
+  margin-bottom: 0;
+}
+.food-cate {
+    font-family: "Roboto", sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+.link-border{
+    border: 1px solid gray;
+    padding-left: 10%;
+    
+}
