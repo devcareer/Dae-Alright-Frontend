@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {connect} from 'react-redux'
 import CustomModal from "../CustomModal";
 import "./index.scss";
 import Button from "../../Button";
@@ -7,69 +8,31 @@ import {
   faFacebookSquare,
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
+import { signIn } from '../../../redux/actions/user'
 
 
 class SignInModal extends Component {
   constructor(){
     super()
-
     this.state={
-      SignInEmail: '',
-      SignInPassword: ''
+      email: '',
+      password: ''
     }
   }
   
   onEmailChange = e =>{
-    this.setState({SignInEmail: e.target.value})
+    this.setState({email: e.target.value})
     
   }
   onPasswordChange = e =>{
-    this.setState({SignInPassword: e.target.value})
+    this.setState({password: e.target.value})
     
   }
   
-  onloginSubmit=async (e)=>{
+  onloginSubmit=(e)=>{
     e.preventDefault()
-   const {SignInEmail, SignInPassword} = this.state;
-    const showAlert=(message, className)=> {
-      
-      const alert = document.createElement('alert');
-      alert.className = `alert ${className}`;
-      alert.appendChild(document.createTextNode(message));
-      const container = document.querySelector('.form-container');
-      const form = document.querySelector('.form');
-      container.insertBefore(alert, form);
-    }
-    if(SignInEmail && SignInPassword){
-     let error = document.querySelector('.alert')
-     console.log('Error!', error)
-     if (error){
-        error.remove()
-     }
-      
-      await fetch('https://dae-alright-staging.herokuapp.com/auth/signin',{
-      method: 'post',
-      headers:{'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        email: this.state.SignInEmail,
-        password: this.state.SignInPassword
-      })
-    })
-    .then(response=> response.json())
-    .then(response=> {
-      if(response.status==='success'){
-        console.log('Welldone Genius you rememebered your login credentials!')
-
-      }
-      else
-      showAlert('Incorrect Email or Password', alert)
-      }
-    
-    )
-  }
-else{
-    showAlert('Please Fill in all fields', alert)
-}
+   this.props.signIn(this.state.password,this.state.email)
+   
   }
 
   
@@ -107,8 +70,9 @@ const titleJSX = () => (
 
 const bodyJSX = () => (
   <React.Fragment>
-     <div className="form-container">
-    <div className='form'>
+     <div className='form'>
+{this.props.signInError && <div className='alert alert-danger' >{this.props.signInError }</div>}
+{this.props.signInSuccess && <div className="alert alert-success">{this.props.signInSuccess}</div>}
       <div className="form-input">
         <input
           type="text"
@@ -132,6 +96,18 @@ const bodyJSX = () => (
         />
       </div>
       <p className="forgot-pswd">Forgot Password?</p>
+      {this.props.signInLoading ?(
+         <button
+         disabled
+         style={btnStyles}
+         className="btn 
+              bnt-lg form-control"
+       >
+       <div className="loader"></div>
+         
+       </button>
+
+      ):(
       <button
         style={btnStyles}
         className="btn 
@@ -140,7 +116,9 @@ const bodyJSX = () => (
       >
         Login
         
-      </button>
+      </button>)}
+      
+      
       <p className="not-signed-in">
         Not Signed In? <span className="sign-up">Sign Up</span>
       </p>
@@ -171,11 +149,23 @@ const bodyJSX = () => (
         />
       </div>
     </div>
-    </div>
+ 
   </React.Fragment>
 );
-return <CustomModal title={titleJSX} body={bodyJSX} />;
+return <CustomModal show={this.props.showSignIn} title={titleJSX} body={bodyJSX} />;
 }
-};
 
-export default SignInModal
+};
+const mapStateToProps =(state)=>{
+ 
+  const {signInError, signInLoading, signInSuccess, showSignIn} = state.userReducer
+  return {
+    signInError,
+    signInLoading,
+    signInSuccess,
+    showSignIn
+  }
+}
+
+
+export default connect(mapStateToProps, {signIn})(SignInModal)
