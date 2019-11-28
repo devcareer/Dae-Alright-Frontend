@@ -5,7 +5,7 @@ import cart from "../../assets/cart.svg";
 import AuthNav from "../Navigation/AuthNav";
 import { Button } from "react-bootstrap";
 import { connect } from 'react-redux'
-import {toggleSignIn} from '../../redux/actions/user'
+import {toggleSignIn} from '../../redux/actions/user.signin'
 const Navigation = props => (
   <div className="navigation" >
     <nav className="navbar navbar-light hamburger">
