@@ -8,7 +8,7 @@ import {
   faFacebookSquare,
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
-import { signIn } from '../../../redux/actions/user.signin'
+import { signIn } from '../../../redux/actions/user'
 
 
 class SignInModal extends Component {
@@ -71,8 +71,7 @@ const titleJSX = () => (
 const bodyJSX = () => (
   <React.Fragment>
      <div className='form'>
-{
-this.props.signInError && <div className='alert alert-danger' >{this.props.signInError }</div>}
+{this.props.signInError && <div className='alert alert-danger' >{this.props.signInError }</div>}
 {this.props.signInSuccess && <div className="alert alert-success">{this.props.signInSuccess}</div>}
       <div className="form-input">
         <input
