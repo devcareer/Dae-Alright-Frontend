@@ -49,9 +49,10 @@ function GetMobile() {
                 </div>
                
             </div>
-                <div className="get-search">
-                    <SearchBar />
-                </div>
+            <div className="get-mobile-searchbar">
+                <h1 className="get-mobile-search-header">Order Now!</h1>
+                <SearchBar whitebackground/>
+            </div>
         </div>
     )
 }

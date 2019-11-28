@@ -10,6 +10,23 @@
     text-align: center;
     color: rgba(0, 0, 0, 0.6);
 }
+.get-mobile-searchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.get-mobile-search-header {
+    margin-right: 40%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 22px;
+    color: #D6DB46;
+}
 .get-mobile-header1 {
     font-family: Roboto;
     font-style: normal;
@@ -79,6 +96,10 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
+    }
+    .get-mobile-search-header {
+        font-size: 25px;
+        margin-left: 10%;
     }
     .get-mobile-image {
         width: 100%;
