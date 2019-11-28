@@ -29,7 +29,7 @@ const Navigation = props => (
           className="navi-text"
           onClick={() => props.toggleSignUp(true)}
         >
-          <SignUpModal  />
+          <SignUpModal />
           LOGIN/SIGNUP
         </Button>
       ) : (

@@ -9,7 +9,7 @@ const CustomModal = props => {
     <>
      
 
-      <Modal show={props.show} onHide={props.onHide} className="custom-modal">
+      <Modal show={props.show} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
         {props.footer && <Modal.Footer>{props.footer()}</Modal.Footer>}
