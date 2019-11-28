@@ -1,76 +1,73 @@
 import {
-  SIGNUP_ACTION,
-  SIGNUP_ACTION_FAIL,
-  SIGNUP_ACTION_SUCCESS,
-  SIGNUP_ACTION_LOADING,
-  TOGGLE_SIGNUP
+  SIGNIN_ACTION_SUCCESS,
+  SIGNIN_ACTION_FAIL,
+  SIGNIN_ACTION_LOADING,
+  TOGGLE_SIGNIN
 } from "../constants/actionTypes";
 
-const signUpAction = payload => {
+const signInAction = payload => {
   return {
-    type: SIGNUP_ACTION,
+    type: SIGNIN_ACTION_SUCCESS,
     user: payload.user,
     token: payload.token
   };
 };
 
-const signUpActionFail = message => {
+const signInActionFail = message => {
   return {
-    type: SIGNUP_ACTION_FAIL,
+    type: SIGNIN_ACTION_FAIL,
     message
   };
 };
 
-const signUpActionSuccess = message => {
+const signInActionSuccess = message => {
   return {
-    type: SIGNUP_ACTION_SUCCESS,
+    type: SIGNIN_ACTION_SUCCESS,
     message
   };
 };
-
-const signUpLoading = signUpLoader => {
+const signInLoading = loader => {
   return {
-    type: SIGNUP_ACTION_LOADING,
-    signUpLoader
+    type: SIGNIN_ACTION_LOADING,
+    loader
   };
 };
- export const toggleSignUp = (showSignUp) => {
+ export const toggleSignIn = showSignIn => {
   return {
-    type: TOGGLE_SIGNUP,
-    showSignUp
-  }
-}
+    type: TOGGLE_SIGNIN,
+    showSignIn
+  };
+};
 
-export const signUp = (firstName, lastName, email, password, phone) => {
+
+export const signIn = (password, email) => {
   return async dispatch => {
-    dispatch(signUpLoading(true));
-    await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signup`, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-        phone
+    if (email && password) {
+      dispatch(signInLoading(true));
+      await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          password
+        })
       })
-    })
-      .then(response => response.json())
-      .then(response =>
-        response.status === "success"
-          ? (dispatch(signUpAction(response.data)),
-            dispatch(
-              signUpActionSuccess("Your account has been created successfully!")
-            ),
-            setTimeout(() => {
-              window.location.reload(true);
-            }, 3000))
-          : (dispatch(signUpActionFail(response.message)),
-            setTimeout(() => {
-              window.location.reload(true);
-            }, 2000))
-      );
+        .then(response => response.json())
+        .then(response =>
+          response.status === "success"
+            ? (console.log(
+                "Welldone Genius you rememebered your login credentials!"
+              ),
+              dispatch(signInAction(response.data)),
+              dispatch(signInActionSuccess("Login Success!")),
+              setTimeout(() => {
+                window.location.reload(true);
+              }, 3000))
+            : dispatch(signInActionFail("Invalid Email or Password")),
+              
+        );
+    } else {
+      dispatch(signInActionFail("Please fill all fields"));
+    }
   };
 };
