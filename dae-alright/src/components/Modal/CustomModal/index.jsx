@@ -4,17 +4,12 @@ import Modal from "react-bootstrap/Modal";
 import "./index.scss";
 
 const CustomModal = props => {
-
-
+  
   return (
     <>
-     <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-        <Modal.Header closeButton></Modal.Header>
-  
-      <Modal show={props.show} className="custom-modal">
+     
 
+      <Modal show={props.show} onHide={props.onHide} className="custom-modal">
         {props.title && <Modal.Title>{props.title()}</Modal.Title>}
         {props.body && <Modal.Body>{props.body()}</Modal.Body>}
         {props.footer && <Modal.Footer>{props.footer()}</Modal.Footer>}

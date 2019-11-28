@@ -4,6 +4,7 @@ import './App.css';
 import { connect } from "react-redux"
 import Navigation from './components/Navigation/index'
 import AuthNav from "./components/Navigation/AuthNav"
+import SearchBar from './components/SearchBar';
 import SignIn from './components/Modal/SignInModal'
 
 class App extends Component {
