@@ -2,14 +2,20 @@
     display: inline-block;
     background-color: #D6DB46;
     margin: 0 5% 0 1%;
-
+    
+    
+    &.white {
+            background-color: white;
+            box-shadow: 7px 50px 100px rgba(0, 0, 0, 0.15);
+        }
     @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: row;
-        margin: 0 5% 0 5%;
+        
         
     }
-
+ 
+    
     .search-drop {
         width: 27vmin;
         height: 6vmin;

@@ -96,7 +96,7 @@ class SearchBar extends React.Component {
             }
 
         return (
-            <div className="search-container">
+            <div className={`${this.props.whitebackground ?  'search-container-white' : ''} search-container`}>
                 {show}
             </div>)
     }

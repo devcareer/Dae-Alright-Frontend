@@ -8,11 +8,8 @@
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
+    margin-left: 1%;
     line-height: 49px;
-}
-.search {
-    margin-left: 2%;
-    margin-top: 2%;
 }
 b {
     color: #D6DB46;;
@@ -23,10 +20,13 @@ b {
     font-weight: normal;
     font-size: 50px;
     line-height: 59px;
+    margin-left: 1%;
     color: #A9A9A9;
     margin-top: 3%;
 }
-
+.search {
+    margin-top: 2%;
+}
 @media screen and (max-width: 780px) {
     .header-text {
         font-size: 25px;
@@ -36,8 +36,8 @@ b {
     .header-paragraph {
         margin-top: 5%;
         font-size: 35px;
-        line-height: 42px;
-        margin-left: -2%;
+        line-height: 32px;
+        margin-left: 0%;
     }
     .search {
         margin-top: 5%;
