@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 import Navigation from './components/Navigation/index'
 import AuthNav from "./components/Navigation/AuthNav"
 import SearchBar from './components/SearchBar';
-import ForgotPasswordModal from "./components/Modal/ForgotPasswordModal";
+
 
 
 class App extends Component {
@@ -16,7 +16,6 @@ class App extends Component {
     <div className="App">
      <Navigation />
       <AuthNav />
-      <ForgotPasswordModal />
       <SearchBar /> 
     </div>
   

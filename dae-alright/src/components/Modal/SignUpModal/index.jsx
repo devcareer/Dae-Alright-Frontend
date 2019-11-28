@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import CustomModal from "../CustomModal";
 import "./index.scss";
+import { signUp } from "../../../redux/actions/user";
 
 const btnStyles = {
   background: "#D6DB46",
@@ -17,66 +19,145 @@ const inputStyles = {
   height: "3em"
 };
 
-const titleJSX = () => (
-  <React.Fragment>
-    <h2>Sign Up</h2>
-    <h6>
-      Hi,Welcome fill in the input to <br /> proceed shopping
-    </h6>
-  </React.Fragment>
-);
+class SignUpModal extends Component {
+  constructor() {
+    super();
+    this.state = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      phone: ""
+    };
+  }
 
-const bodyJSX = () => (
-  <React.Fragment>
-    <form>
-      <div className="form-input">
-        <input
-          type="text"
-          placeholder="Full Name"
-          className="form-control"
-          style={inputStyles}
-        />
-      </div>
-      <div className="form-input">
-        <input
-          type="email"
-          placeholder="Email"
-          className="form-control"
-          style={inputStyles}
-        />
-      </div>
-      <div className="form-input">
-        <input
-          type="password"
-          placeholder="Password"
-          className="form-control"
-          style={inputStyles}
-        />
-      </div>
-      <div className="form-input">
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          className="form-control"
-          style={inputStyles}
-        />
-      </div>
-      <button
-        style={btnStyles}
-        className="btn 
-             bnt-lg form-control"
-      >
-        Sign Up
-      </button>
-      <p>
-        Already Sign Up? <span>Sign In</span>
-      </p>
-    </form>
-  </React.Fragment>
-);
+  handleSignUpButton = event => {
+    event.preventDefault();
+    this.props.signUp(
+      this.state.firstName,
+      this.state.lastName,
+      this.state.email,
+      this.state.password,
+      this.state.phone
+    );
+  };
 
-const SignUpModal = () => {
-  return <CustomModal title={titleJSX} body={bodyJSX} />;
+  titleJSX = () => (
+    <React.Fragment>
+      <h2>Sign Up</h2>
+      <h6>
+        Hi,Welcome fill in the input to <br /> proceed shopping
+      </h6>
+    </React.Fragment>
+  );
+
+  bodyJSX = () => (
+    <React.Fragment>
+      <form>
+        {this.props.signUpError && (
+          <div className="alert alert-danger ">{this.props.signUpError}</div>
+        )}
+        {this.props.signUpSuccess && (
+          <div className="alert alert-success">{this.props.signUpSuccess}</div>
+        )}
+        <div className="form-input">
+          <input
+            type="text"
+            placeholder="First Name"
+            className="form-control"
+            style={inputStyles}
+            required
+            onChange={event => {
+              this.setState({ firstName: event.target.value });
+            }}
+          />
+        </div>
+        <div className="form-input">
+          <input
+            type="text"
+            placeholder="Last Name"
+            className="form-control"
+            style={inputStyles}
+            required
+            onChange={event => {
+              this.setState({ lastName: event.target.value });
+            }}
+          />
+        </div>
+        <div className="form-input">
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="form-control"
+            style={inputStyles}
+            required
+            onChange={event => {
+              this.setState({ email: event.target.value });
+            }}
+          />
+        </div>
+        <div className="form-input">
+          <input
+            type="password"
+            placeholder=" Password"
+            className="form-control"
+            style={inputStyles}
+            required
+            onChange={event => {
+              this.setState({ password: event.target.value });
+            }}
+          />
+        </div>
+        <div className="form-input">
+          <input
+            type="number"
+            placeholder=" Phone Number"
+            className="form-control"
+            style={inputStyles}
+            required
+            onChange={event => {
+              this.setState({ phone: event.target.value });
+            }}
+          />
+        </div>
+        {this.props.signUpLoader ? (
+          <button
+            style={btnStyles}
+            disabled
+            className="btn 
+        bnt-lg form-control"
+          >
+            <div className="loader"></div>
+          </button>
+        ) : (
+          <button
+            style={btnStyles}
+            className="btn 
+        bnt-lg form-control"
+            onClick={event => this.handleSignUpButton(event)}
+          >
+            Sign Up
+          </button>
+        )}
+        <p>
+          Already Sign Up? <span>Sign In</span>
+        </p>
+      </form>
+    </React.Fragment>
+  );
+
+  render() {
+    return <CustomModal show={this.props.showSignUp}  title={this.titleJSX} body={this.bodyJSX} />;
+  }
+}
+const mapStateToProps = state => {
+  const { signUpError, signUpSuccess, signUpLoader, showSignUp } = state.userReducer;
+  return {
+    signUpError,
+    signUpLoader,
+    signUpSuccess,
+    showSignUp
+  };
 };
 
-export default SignUpModal;
+export default connect(mapStateToProps, { signUp })(SignUpModal);
