@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./vendor.scss"
 import DummyList from "../../DummyList"
 import Button from "../../../../components/Button"
-
+// import { Link }  from "react-router-dom"
 
 
 export default class Vendor extends Component {
@@ -12,6 +12,7 @@ export default class Vendor extends Component {
             vendor: DummyList
         }
     }
+
     render() {
         const vendorList = this.state.vendor.map(item => (
                 <div key={item.id} className="">
