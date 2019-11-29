@@ -32,13 +32,12 @@ const signInLoading = loader => {
     loader
   };
 };
- export const toggleSignIn = showSignIn => {
+export const toggleSignIn = showSignIn => {
   return {
     type: TOGGLE_SIGNIN,
     showSignIn
   };
 };
-
 
 export const signIn = (password, email) => {
   return async dispatch => {
@@ -53,18 +52,19 @@ export const signIn = (password, email) => {
         })
       })
         .then(response => response.json())
-        .then(response =>
-          response.status === "success"
-            ? (console.log(
-                "Welldone Genius you rememebered your login credentials!"
-              ),
-              dispatch(signInAction(response.data)),
-              dispatch(signInActionSuccess("Login Success!")),
-              setTimeout(() => {
-                window.location.reload(true);
-              }, 3000))
-            : dispatch(signInActionFail("Invalid Email or Password")),
-              
+        .then(
+          response =>
+            response.status === "success"
+              ? (console.log(
+                  "Welldone Genius you rememebered your login credentials!"
+                ),
+                dispatch(signInAction(response.data)),
+                dispatch(signInActionSuccess("Login Success!")),
+                setTimeout(() => {
+                  window.location.reload(true);
+                }, 3000))
+              : dispatch(signInLoading(false)),
+          dispatch(signInActionFail("Invalid Email or Password"))
         );
     } else {
       dispatch(signInActionFail("Please fill all fields"));

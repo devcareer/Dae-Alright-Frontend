@@ -62,7 +62,7 @@ const btnColorStyles = {
 };
 
 const titleJSX = () => (
-  <React.Fragment>
+  <React.Fragment className='pd2'>
     <h2 className="welcomeText__primary">Sign In</h2>
     <h5 className="welcomeText__secondary">Welcome back</h5>
   </React.Fragment>

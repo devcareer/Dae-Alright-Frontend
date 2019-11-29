@@ -43,7 +43,6 @@ const signInLoading = loader => {
 export const signIn = (password, email) => {
   return async dispatch => {
     if (email && password) {
-      dispatch(signInLoading(true));
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -60,10 +59,13 @@ export const signIn = (password, email) => {
               ),
               dispatch(signInAction(response.data)),
               dispatch(signInActionSuccess("Login Success!")),
+              dispatch(signInLoading(true)),
               setTimeout(() => {
                 window.location.reload(true);
-              }, 3000))
-            : dispatch(signInActionFail("Invalid Email or Password")),
+              }, 2000))
+
+            :
+            dispatch(signInActionFail("Invalid Email or Password")), dispatch(signInLoading(false))
               
         );
     } else {
