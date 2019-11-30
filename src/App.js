@@ -16,6 +16,12 @@ class App extends Component {
        </Switch> 
 
      
+
+  
+     <Homepage />
+
+    
+     <RestauMenuPage/>
     </div>
   
   );
