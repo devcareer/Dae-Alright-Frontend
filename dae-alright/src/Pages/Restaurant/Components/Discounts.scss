@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+
+
+.discount-wrapper{
+    margin-left: 30%;
+}
 .percent-off {
   background-color: #ed7b43;
   border: 1px solid #ed7b43;
@@ -10,7 +15,7 @@
   font-weight: normal;
   font-family: "Roboto", sans-serif;
 }
-.discount-wrapper {
+.discount{
   position: absolute;
   top: 29%;
   left: 55%;
