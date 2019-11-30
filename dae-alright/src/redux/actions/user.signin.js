@@ -40,7 +40,9 @@ export const toggleSignIn = showSignIn => {
 };
 
 export const signIn = (password, email) => {
+  
   return async dispatch => {
+    dispatch(signInLoading(true))
     if (email && password) {
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
         method: "post",
