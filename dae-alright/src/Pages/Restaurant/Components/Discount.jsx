@@ -8,14 +8,15 @@ const Discount = () => {
   return (
     <Container>
       <Row>
-        <img
+        <div className="discount-wrapper">
+<img
           src={offers}
           className="discount-image"
           height="400px"
           width="301px"
           alt="offers and discounts"
         />
-        <div className="discount-wrapper">
+        <div className="discount">
           <p className="percent-off">15% Off</p>
           <p
             style={{
@@ -33,6 +34,9 @@ const Discount = () => {
         <a className="offers" href="">
           VIEW OFFERS
         </a>
+
+        </div>
+        
       </Row>
     </Container>
   );
