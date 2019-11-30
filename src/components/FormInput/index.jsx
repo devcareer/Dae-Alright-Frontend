@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./formInput.style.scss";
+// import "./formInput.style.scss";
 
 const FormInput = ({ placeholder, type, style, renderProps }) => {
   return (

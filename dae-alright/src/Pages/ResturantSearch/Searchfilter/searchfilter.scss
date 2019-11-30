@@ -1,0 +1,225 @@
+@mixin margin() {
+    margin: 10px 15px;
+  }
+  
+  .filter {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.5rem;
+    margin-top: 1.2rem;
+  
+    .search {
+      font-size: 16px;
+      background: darkkhaki;
+      border: 1px solid grey;
+      color: white;
+      height: 2rem;
+      border-top: none;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+    }
+  
+    .input {
+      font-size: 12px;
+      width: 14rem;
+    }
+  
+    .search-form {
+      border: 1px solid lightgrey;
+  
+      .input {
+        @include margin();
+      }
+  
+      .food-item {
+        @include margin();
+      }
+    }
+  
+    .deliveryText {
+      text-transform: uppercase;
+      // font-weight: 400;
+      font-size: 0.9rem;
+      @include margin();
+    }
+  
+    .deliveryMethod {
+      @include margin();
+    }
+  
+    .tags {
+      @include margin();
+  
+      .tag {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+  
+      .tagged {
+        .taggedFood {
+          margin: 0.1rem;
+          background: whitesmoke;
+          border: none;
+          outline: none;
+  
+          .cancel {
+            margin-left: 0.5rem;
+            color: black
+          }
+        }
+      }
+    }
+  
+    .min-order {
+      @include margin();
+  
+      .minOrder {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+  
+      .range-group {
+        position: relative;
+        flex: 0 0 100%;
+  
+        .range-input {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          -webkit-appearance: none;
+          width: 100%;
+          border-bottom: 0;
+  
+          &:focus {
+            outline: 0;
+          }
+  
+          &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            animation: 0.2s;
+            background: darkkhaki;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+          }
+  
+          &::-webkit-slider-thumb {
+            z-index: 2;
+            position: relative;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: whitesmoke;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -7px;
+          }
+  
+          &::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            animation: 0.2s;
+            background: darkkhaki;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+          }
+          &::-moz-range-thumb {
+            z-index: 2; 
+            position: relative; 
+            box-shadow: 0px 0px 0px #000;
+            border: 1px solid #2497e3;
+            height: 18px; 
+            width: 18px; 
+            border-radius: 50%; 
+            background: #3FAFFA; 
+            cursor: pointer; 
+          }
+  
+          &::-ms-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            animation: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+  
+          &::-ms-fill-lower,
+          &::-ms-fill-upper {
+            background: darkkhaki;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+          }
+          &::-ms-thumb {
+            z-index: 2; 
+            position: relative; 
+            // box-shadow: 0px 0px 0px #000;
+            // border: 1px solid #2497e3;
+            height: 18px; 
+            width: 18px; 
+            border-radius: 50%; 
+            background: #3FAFFA; 
+            cursor: pointer; 
+          }
+    
+        }
+      }
+  
+      .number-group {
+        margin-top: 2.5rem;
+  
+        .number-input {
+          &:first-of-type {
+            border: none;
+            // margin-right: 2rem;
+          }
+  
+          &:last-of-type {
+            border: none;
+            position: relative;
+            left: 11.5rem;
+          }
+          &:hover,
+           &:focus{
+            border: none;
+            background: none;
+            outline: none;
+            border-color: transparent;
+          }
+          
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+      }
+    }
+    .rating{
+      @include margin();
+      .rate{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      .rateCheck{
+        // margin-left: .5em;
+  
+        font-size: larger;
+      }
+      .star{
+        margin:0 .2rem;
+      }
+    }
+   }
