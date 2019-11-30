@@ -41,7 +41,9 @@ const signInLoading = loader => {
 
 
 export const signIn = (password, email) => {
+  
   return async dispatch => {
+    dispatch(signInLoading(true))
     if (email && password) {
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
         method: "post",
@@ -54,9 +56,7 @@ export const signIn = (password, email) => {
         .then(response => response.json())
         .then(response =>
           response.status === "success"
-            ? (console.log(
-                "Welldone Genius you rememebered your login credentials!"
-              ),
+            ? (
               dispatch(signInAction(response.data)),
               dispatch(signInActionSuccess("Login Success!")),
               dispatch(signInLoading(true)),
@@ -65,10 +65,13 @@ export const signIn = (password, email) => {
               }, 2000))
 
             :
-            dispatch(signInActionFail("Invalid Email or Password")), dispatch(signInLoading(false))
+            (dispatch(signInLoading(true)),
+            dispatch(signInActionFail("Invalid Email or Password")),
+            dispatch(signInLoading(false)))
               
         );
     } else {
+      dispatch(signInLoading(true))
       dispatch(signInActionFail("Please fill all fields"));
     }
   };
