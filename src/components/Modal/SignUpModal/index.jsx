@@ -147,11 +147,23 @@ class SignUpModal extends Component {
   );
 
   render() {
-    return <CustomModal show={this.props.showSignUp} onHide={this.props.showSignUp} title={this.titleJSX} body={this.bodyJSX} />;
+    return (
+      <CustomModal
+        show={this.props.showSignUp}
+        onHide={this.props.showSignUp}
+        title={this.titleJSX}
+        body={this.bodyJSX}
+      />
+    );
   }
 }
 const mapStateToProps = state => {
-  const { signUpError, signUpSuccess, signUpLoader, showSignUp } = state.userReducer;
+  const {
+    signUpError,
+    signUpSuccess,
+    signUpLoader,
+    showSignUp
+  } = state.userReducer;
   return {
     signUpError,
     signUpLoader,

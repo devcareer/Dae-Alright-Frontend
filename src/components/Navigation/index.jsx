@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 import { toggleSignUp } from "../../redux/actions/user";
 
 const Navigation = props => (
-  <div className="navigation">
+  <div className="navigation" >
     <nav className="navbar navbar-light hamburger">
       <a className="navbar-brand" href="index.jsx">
         <img
