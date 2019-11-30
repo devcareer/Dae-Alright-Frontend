@@ -11,7 +11,7 @@
     @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: row;
-        
+        margin: 0 5% 0  5%;
         
     }
 
@@ -19,7 +19,7 @@
  
     
     .search-drop {
-        width: 27vmin;
+        width: 20vmin;
         height: 6vmin;
         margin: 3vmin 2vmin 3vmin 2vmin;
         border: 1px solid white;
