@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.percent-off {
+  background-color: #ed7b43;
+  border: 1px solid #ed7b43;
+  border-radius: 100px;
+  width: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+}
+.discount-wrapper {
+  position: absolute;
+  top: 29%;
+  left: 55%;
+}
+
+.offers {
+  background-color: #ed7b43;
+  border: 1px solid #ed7b43;
+  color: #fff;
+  border: 1px solid #ed7b43;
+  margin-left: 14%;
+  width: 59%;
+  text-align: center;
+  height: 30%;
+  font-family: "Roboto", sans-serif;
+  padding: 2%;
+  font-size: 12px;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
