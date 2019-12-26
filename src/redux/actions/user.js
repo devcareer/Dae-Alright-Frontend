@@ -66,7 +66,7 @@ export const signIn = (password, email) => {
               : dispatch(signInLoading(false)),
           dispatch(signInActionFail("Invalid Email or Password")),
           setTimeout(() => {
-            dispatch(signInActionFail(false))
+            dispatch(signInActionFail(false)) 
           }, 1000)
         );
     } else {
