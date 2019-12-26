@@ -161,6 +161,8 @@ class Searchfilter extends React.Component{
         <FontAwesomeIcon icon={faStar} color ="#D6DB46"  className='star'/>
         </section>
       </section>
+      <hr />
+      <input type="button"  className='searchBtn' value="Search"/>
     </form>
   </div>
     )
