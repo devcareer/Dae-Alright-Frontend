@@ -73,7 +73,7 @@ export const signIn = (password, email) => {
       dispatch(signInActionFail("Please fill all fields"))
       setTimeout(() => {
         dispatch(signInActionFail(false))
-      }, 1000)
+      }, 3000)
       
 
     
