@@ -11,7 +11,7 @@
   
     .search {
       font-size: 16px;
-      background: darkkhaki;
+      background: #d6db46;
       border: 1px solid grey;
       color: white;
       height: 2rem;
@@ -19,7 +19,7 @@
       margin: 0;
       display: flex;
       align-items: center;
-      padding-left: 1rem;
+      padding-left: 2.34rem;
     }
   
     .input {
@@ -104,7 +104,7 @@
             height: 2px;
             cursor: pointer;
             animation: 0.2s;
-            background: darkkhaki;
+            background: #d6db46;
             border-radius: 1px;
             box-shadow: none;
             border: 0;
@@ -127,7 +127,7 @@
             height: 2px;
             cursor: pointer;
             animation: 0.2s;
-            background: darkkhaki;
+            background: #d6db46;
             border-radius: 1px;
             box-shadow: none;
             border: 0;
@@ -156,7 +156,7 @@
   
           &::-ms-fill-lower,
           &::-ms-fill-upper {
-            background: darkkhaki;
+            background: #d6db46;
             border-radius: 1px;
             box-shadow: none;
             border: 0;
