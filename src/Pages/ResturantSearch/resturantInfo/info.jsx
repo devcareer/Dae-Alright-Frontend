@@ -1,5 +1,5 @@
 import React from 'react'
-import DummyList from "../../../dummy-list"
+import DummyList from "../dummy-list"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import "./info.scss"
@@ -15,7 +15,7 @@ import "./info.scss"
         const foodContainer = this.state.foodList.map((item, i ) =>
         
          (i <= 5 ? <div className="info">
-            <img className='img' src={item.imageUrl} />
+            <img className='img' src={item.imageUrl} alt=""/>
             <div>
     <h1 className='name'>{item.name}</h1>
         <p>{item.address}</p>
@@ -39,7 +39,7 @@ import "./info.scss"
         return (
             <div>
                 {foodContainer}
-                <input className='btn' type="button" value="Load more"/>
+                <input className='load' type="button" value="Load more"/>
             </div>
 
         )
