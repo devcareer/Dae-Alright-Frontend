@@ -67,7 +67,12 @@ export const signIn = (password, email) => {
           dispatch(signInActionFail("Invalid Email or Password"))
         );
     } else {
-      dispatch(signInActionFail("Please fill all fields"));
-    }
+      dispatch(signInActionFail("Please fill all fields"))
+      setTimeout(() => {
+        dispatch(signInActionFail(false))
+      }, 3000)
+      
+
+    
   };
 };
