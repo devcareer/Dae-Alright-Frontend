@@ -64,7 +64,10 @@ export const signIn = (password, email) => {
                   window.location.reload(true);
                 }, 3000))
               : dispatch(signInLoading(false)),
-          dispatch(signInActionFail("Invalid Email or Password"))
+          dispatch(signInActionFail("Invalid Email or Password")),
+          setTimeout(() => {
+            dispatch(signInActionFail(false)) 
+          }, 1000)
         );
     } else {
       dispatch(signInActionFail("Please fill all fields"))
