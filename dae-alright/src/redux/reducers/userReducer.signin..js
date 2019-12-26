@@ -49,7 +49,7 @@ export default (state = initialState, action) => {
     case SIGNIN_ACTION_SUCCESS:
       return {
         ...state,
-        signInError: action.message,
+        signInSuccess: action.message,
         signInLoader: false
       };
 
