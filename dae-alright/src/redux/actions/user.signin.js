@@ -32,18 +32,15 @@ const signInLoading = loader => {
     loader
   };
 };
- export const toggleSignIn = showSignIn => {
+export const toggleSignIn = showSignIn => {
   return {
     type: TOGGLE_SIGNIN,
     showSignIn
   };
 };
 
-
 export const signIn = (password, email) => {
-  
   return async dispatch => {
-    dispatch(signInLoading(true))
     if (email && password) {
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
         method: "post",
@@ -56,23 +53,21 @@ export const signIn = (password, email) => {
         .then(response => response.json())
         .then(response =>
           response.status === "success"
-            ? (
-              dispatch(signInAction(response.data)),
+            ? (dispatch(signInAction(response.data)),
               dispatch(signInActionSuccess("Login Success!")),
               dispatch(signInLoading(true)),
               setTimeout(() => {
                 window.location.reload(true);
               }, 2000))
-
-            :
-            (dispatch(signInLoading(true)),
-            dispatch(signInActionFail("Invalid Email or Password")),
-            dispatch(signInLoading(false)))
-              
+            : (dispatch(signInLoading(true)),
+              dispatch(signInActionFail("Invalid Email or Password")),
+              dispatch(signInLoading(false)))
         );
     } else {
-      dispatch(signInLoading(true))
-      dispatch(signInActionFail("Please fill all fields"));
+      dispatch(signInActionFail("Please fill all fields"))
+      setTimeout(() => dispatch(signInActionFail(false))
+, 1000)
+     
     }
-  };
-};
+  }
+}
