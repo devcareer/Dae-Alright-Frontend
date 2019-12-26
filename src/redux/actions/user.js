@@ -42,7 +42,7 @@ export const toggleSignIn = showSignIn => {
 export const signIn = (password, email) => {
   return async dispatch => {
     if (email && password) {
-      dispatch(signInLoading(true));
+      
       await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/user/signin`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
@@ -62,12 +62,22 @@ export const signIn = (password, email) => {
                 dispatch(signInActionSuccess("Login Success!")),
                 setTimeout(() => {
                   window.location.reload(true);
-                }, 3000))
+                }, 2000))
               : dispatch(signInLoading(false)),
-          dispatch(signInActionFail("Invalid Email or Password"))
+          dispatch(signInActionFail("Invalid Email or Password")),
+          setTimeout(() => {
+            dispatch(signInActionFail(false))
+          }, 1000)
         );
     } else {
-      dispatch(signInActionFail("Please fill all fields"));
-    }
+      dispatch(signInActionFail("Please fill all fields"))
+      setTimeout(() => {
+        dispatch(signInActionFail(false))
+      }, 1000)
+      
+
+    
   };
 };
+
+}
