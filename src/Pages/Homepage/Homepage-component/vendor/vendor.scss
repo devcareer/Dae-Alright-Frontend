@@ -7,7 +7,7 @@
 .vendor-list {
     display: grid;
     margin: 0 auto; 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1.0fr 1fr 1fr 1fr;
     width: 90%;
     grid-gap: 20px;
     font-size: 12px;
@@ -55,6 +55,14 @@
     font-size: 22px;
     line-height: 21px
 }
+.open {
+    position: absolute;
+    top: 0%;
+    background-color: #D6DB46;
+    padding: 2px 15px;
+    color: white;
+    clip-path: polygon(0% 0%, 100% 0, 94% 53%, 100% 100%, 0% 100%);
+}
 .vendor-text {
     font-size: 20px;
     margin-left: 5px;
@@ -74,8 +82,7 @@
 }
 .vendor-list-item {
     margin-top: 5%;
- 
-    width: 300;
+    width: 300px;
     border: none;
     border: 1px solid #E3E3E3;
     box-sizing: border-box;

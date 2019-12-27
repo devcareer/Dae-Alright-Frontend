@@ -15,8 +15,8 @@ function GetMobile() {
                     <h1 className="get-mobile-header1">DOWNLOAD THE APP</h1>
                     <p className="get-mobile-paragraph">Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula<br /> odio. Donec pulvinar tellus eget magna.</p>
                     <div className="get-mobile-img">
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
+                        <a href="#"><img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" /></a>
+                        <a href="#"><img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" /></a>
                     </div>
 
                     <div className="container">

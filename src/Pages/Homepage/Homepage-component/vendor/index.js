@@ -20,6 +20,7 @@ export default class Vendor extends Component {
                         <div className="row">
                             <div className="col-12 vendor-list-item">
                                 <img className="vendor-image img-responsive" src={item.imageUrl} alt="foodimage" />
+                                <h3 className="open">OPEN</h3>
                                 <h1 className="vendor-text">{item.name}</h1>
                                 <p className="vendor-paragraph">{item.address}</p>
                                 <div className="vendor-order">
@@ -37,8 +38,9 @@ export default class Vendor extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 vendor">
-                            <h1 className="vendor-header">Choose from the most popular</h1>
+                            <h1 className="vendor-header">Choose from the most popular < img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1577445129/h97kaqmgx6uysqfwonoi.png" alt="" /></h1>
                             <p className="vendor-header2">Explore restaurants, bars, and cafes by locality</p>
+                            <br />
                             <div className="vendor-list">
                                 {vendorList}
                             </div>
