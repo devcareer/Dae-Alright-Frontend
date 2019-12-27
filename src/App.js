@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { connect } from "react-redux"
-
-
-import Homepage from "../src/Pages/Homepage/Homepage"
+import Homepage from "../src/Pages/Homepage"
 
 class App extends Component {
 
