@@ -34,12 +34,12 @@ const signUpLoading = signUpLoader => {
     signUpLoader
   };
 };
- export const toggleSignUp = (showSignUp) => {
+export const toggleSignUp = showSignUp => {
   return {
     type: TOGGLE_SIGNUP,
     showSignUp
-  }
-}
+  };
+};
 
 export const signUp = (firstName, lastName, email, password, phone) => {
   return async dispatch => {
@@ -69,8 +69,8 @@ export const signUp = (firstName, lastName, email, password, phone) => {
             }, 3000))
           : (dispatch(signUpActionFail(response.message)),
             setTimeout(() => {
-              window.location.reload(true);
-            }, 2000))
+              dispatch(signUpActionFail(""));
+            }, 3000))
       );
   };
 };
