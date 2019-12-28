@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import Navigation from './components/Navigation/index'
 import AuthNav from "./components/Navigation/AuthNav"
 import SearchBar from './components/SearchBar';
+import RestaurantInfo from './Pages/Restaurant-Info-Page/Restaurant-Info-Page'
 
 
 
@@ -14,9 +15,10 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Navigation />
+     {/* <Navigation />
       <AuthNav />
-      <SearchBar /> 
+      <SearchBar /> */}
+      <RestaurantInfo /> 
     </div>
   
   );
