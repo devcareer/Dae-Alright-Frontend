@@ -22,7 +22,7 @@ function RestaurantInfo() {
                     </div>
                     <div className='middle-main-section-bodies'>
                         <div className='main-address-details'>
-                            <h2>Overview Ajegunle Finest Chao</h2>
+                            <h4>Overview Ajegunle Finest Chao</h4>
                             <p>
                                 Base prepared fresg daily. Extra toppings are availbale in chose extra.
                                 Choose ur sauce: Go for BBQ sauce or piri piri suace with your pizza base for no extra cost. Choose you cut: triangular, square, finges.
@@ -30,7 +30,7 @@ function RestaurantInfo() {
                         </div>
                         <div className='main-information-details'>
                             <div className='contact-details'>
-                                <h2>Contact Details</h2>
+                                <h4>Contact Details</h4>
                                 <p>
                                     <img  alt='location icon' src='https://res.cloudinary.com/dtbjhs8a6/image/upload/v1577444808/qkfwznycw2rapvpzysur.png'/>
                                     <span>Pizza Express Restaurants, Boundary, Ajegunle.</span>
@@ -49,16 +49,16 @@ function RestaurantInfo() {
                                 </p>
                             </div>
                             <div className='opening-hours'>
-                                <h2>Opening Hours</h2>
-                                <div className="days-and-hour">
-                                    <select name="browsers" size="1" class="row2item1">
+                                <h4>Opening Hours</h4>
+                                <div className="days-and-hour-listed">
+                                    <select name="browsers" size="1" class="days-and-hour">
                                         <option>Monday  11am to 11pm</option>
-                                        <option value="chrome">Google Chrome</option>
-                                        <option value="safari">Safari</option>
-                                        <option value="explorer">Internet Explorer</option>
-                                        <option value="firefox">Firefox</option>
-                                        <option value="opera">Opera</option>
-                                        <option value="brave">Brave </option>
+                                        <option value="chrome">Tuesday  11am to 11pm</option>
+                                        <option value="safari">Wednesday  11am to 11pm</option>
+                                        <option value="explorer">Thursday  11am to 11pm</option>
+                                        <option value="firefox">Friday  11am to 11pm</option>
+                                        <option value="opera">Saturday  11am to 11pm</option>
+                                        <option value="brave">Sunday  11am to 11pm </option>
                                     </select>
                                 </div>
                             </div>
@@ -70,7 +70,8 @@ function RestaurantInfo() {
                 </div>
                 <div className='right-main-section'></div>
             </main>
-            <footer className='restaurant-page-footer'></footer>
+            
+            <Footer />
         </body>
     )
 }
