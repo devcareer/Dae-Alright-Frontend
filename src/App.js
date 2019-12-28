@@ -7,6 +7,12 @@ import UserDashboard from './Pages/user-dashboard';
 import DashboardOrder from './Pages/user-dashboard/order-dashboard';
 import OrderRefund from "./Pages/user-dashboard/dashboard-refund"
 
+import './App.css';
+import { connect } from "react-redux"
+import Navigation from './components/Navigation/index'
+import AuthNav from "./components/Navigation/AuthNav"
+import SearchBar from './components/SearchBar';
+import RestaurantInfo from './Pages/Restaurant-Info-Page/Restaurant-Info-Page'
 
 
 
@@ -16,14 +22,10 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route exact path="/dashboard/information" component={UserDashboard} />
-        <Route exact path="/restaurant/menu" component={RestauMenuPage} />
-        <Route exact path="/dashboard/order" component={DashboardOrder} />
-        <Route exact path="/dashboard/refund" component={OrderRefund} />
-     </Switch> 
-    
+     {/* <Navigation />
+      <AuthNav />
+      <SearchBar /> */}
+      <RestaurantInfo /> 
     </div>
   
   );
