@@ -8,7 +8,7 @@
     display: grid;
     margin: 0 auto; 
     grid-template-columns: 1.0fr 1fr 1fr 1fr;
-    width: 90%;
+    width: 100%;
     grid-gap: 20px;
     font-size: 12px;
     font-style: normal;
@@ -16,7 +16,7 @@
 }
 
 .vendor-image {
-    width: 300px;
+    width: 270px;
     height: 200px;
 }
 .vendor-header {
