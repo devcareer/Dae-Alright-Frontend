@@ -1,19 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@mixin  restaurant-info-page-media-query($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+    
+}
+
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: Roboto;
 }
 .restaurant-page-main {
     background-color: #E5E5E5;
     font-family: Roboto;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+
+    @include restaurant-info-page-media-query(600px){
+        flex-direction: column;
+    }
 
     .left-main-section{
-
+        width: 20%;
+        @include restaurant-info-page-media-query(600px){
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
     .middle-main-section{
+        width: 45%;
+        @include restaurant-info-page-media-query(600px){
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+      .middle-main-section-titles{
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0 0 30px;
+          margin-bottom: 0px;
 
+          .main-section-titles{
+            text-align: center;
+            padding: 8px 0px;
+            width: 30%;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+            color: #626262;
+
+            @include restaurant-info-page-media-query(600px){
+                font-size: 12px;
+            }
+            p{
+                display: flex;
+                margin-bottom: 0px;
+                img{
+                    align-self: center;
+                    margin-right: 10px;
+                }
+            }
+            //   padding-top: 5px;
+          }
+          
+          .restaurant-info{
+              background-color: #D6DB46;
+              color: rgba(0, 0, 0, 0.6);
+              width: 35%;
+              color: #FFFFFF;
+              img{
+                  margin-left: 10px;
+              }
+            
+              
+          }
+      }
+      
+      .middle-main-section-bodies{
+        margin: 0px;
+        border: 1px solid #FFFFFF;
+        background-color: #FFFFFF;
+        box-shadow: 7px 35px 100px rgba(0, 0, 0, 0.1);
+        padding: 50px 30px;
+        font-size: 15px;
+        line-height: 19px;
+
+        .main-address-details{
+           color: rgba(0, 0, 0, 0.6);
+           padding-bottom: 35px;
+
+           @include restaurant-info-page-media-query(600px){
+            font-size: 13px;
+            line-height: 21px;
+            
+            }
+
+            h4{
+                @include restaurant-info-page-media-query(600px){
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+        .main-information-details{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 33px;
+
+            @include restaurant-info-page-media-query(600px){
+                flex-direction: column;
+            }
+            .contact-details{
+                width: 45%;
+                @include restaurant-info-page-media-query(600px){
+                    width: 80%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                
+                h4{
+                    font-size: 15px;
+                    line-height: 19px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.6);
+                    @include restaurant-info-page-media-query(600px){
+                        text-align: center;
+                    }
+                }
+                p{
+                    display: flex;
+                    color: rgba(0, 0, 0, 0.4);
+                    img{
+                        margin-right: 7px;
+                        align-self: center;
+                    }
+                    span{
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .opening-hours{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                width: 40%;
+                color: rgba(0, 0, 0, 0.4);
+                @include restaurant-info-page-media-query(600px){
+                    width: 80%;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                h4{
+                    font-size: 15px;
+                    line-height: 19px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.6);
+                    @include restaurant-info-page-media-query(600px){
+                        text-align: center;
+                    }
+                }
+                .days-and-hour-listed{
+                    
+                    @include restaurant-info-page-media-query(600px){
+                        text-align: center;
+                    }
+                    .days-and-hour{
+                        background-color: #C4C4C4;
+                        padding: 6px;
+                    }
+                }
+                
+            }
+        }
+
+        .main-scan-code{
+            padding-left: 20px;
+            width: 100%;
+            @include restaurant-info-page-media-query(600px){
+                display: flex;
+                justify-content: center;
+            }
+            
+            
+        }
+      }
     }
     .right-main-section{
-        
+        width: 20%;
+        @include restaurant-info-page-media-query(600px){
+            display: none;
+        }
     }
 }
