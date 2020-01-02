@@ -30,9 +30,9 @@
     .search-form {
       border: 1px solid lightgrey;
   
-      .input {
-        @include margin();
-      }
+      // .input {
+      //   // @include margin();
+      // }
   
       .food-item {
         @include margin();
@@ -41,7 +41,6 @@
   
     .deliveryText {
       text-transform: uppercase;
-      // font-weight: 400;
       font-size: 0.9rem;
       @include margin();
     }

@@ -13,17 +13,12 @@ class Searchfilter extends React.Component{
     this.state = {}
     
   }
-  // handleChange = (e) => {
-  //   const {value} = e.target;
-  //   console.log(value, 'is targeted');
-  //   }
+  
     render(){
       return(
         
         <div className="filter">
-        {/* <InputRange draggableTrack maxValue={100} minValue={1} value={this.state.value2} style={{background: 'green'}}/> */}
     <h3 className="search">Search Filters</h3>
-    {/* change to class, add onsubmit */}
     <form className="search-form">
       {/* add onchange event */}
       <FormInput
@@ -87,7 +82,7 @@ class Searchfilter extends React.Component{
         <div class="range-group">
           <input
             class="range-input"
-            value='1'
+            // value='1'
             min='1'
             max="10"
             step="1"
