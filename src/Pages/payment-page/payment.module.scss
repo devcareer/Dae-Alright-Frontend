@@ -155,9 +155,19 @@
       }
     }
   }
-
-  h2 {
+  .orderNow{
+    margin-bottom: 5em;
+h2 {
     color: #D6DB46;
-    margin-left: .8em;
+      @media (max-width:767px){
+    text-align: left;
+    font-size: 1.5em;
+    }
+    @media (min-width:768px){
+    margin-left: -13em;
+    }
+   
   }
+  }
+  
 }

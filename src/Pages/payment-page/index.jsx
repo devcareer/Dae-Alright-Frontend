@@ -56,13 +56,12 @@ const PaymentPage = props => {
           <button>Pay</button>
         </form>
       </section>
-      <h2>Order Now!</h2>
-      <SearchBar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className={classes.orderNow}>
+        <center>
+          <h2>Order Now!</h2>
+          <SearchBar whitebackground />
+        </center>
+      </div>
       <Footer />
     </div>
   );
