@@ -1,0 +1,69 @@
+.procedure {
+    background: red;
+    position: absolute;
+    top: 95%;
+    margin-left: 15%;
+    background: #FFFFFF;
+    box-shadow: 7px 50px 100px rgba(0, 0, 0, 0.15);
+}
+.blank {
+    background-color:  #C4C4C4;
+    height: 300px;
+    position: relative;
+}
+.procedure-header {
+    margin-bottom: 15%;  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.procedure-image {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 27%;
+    
+}
+.procedure-paragraph {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+}
+.procedure-paragraph1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+}
+.procedure-image1 {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 780px) {
+    .procedure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1%;
+        top: 75%;
+    }
+    .procedure-header {
+        margin-left: 7%;
+    }
+    .blank {
+        display: none;
+    }
+}
