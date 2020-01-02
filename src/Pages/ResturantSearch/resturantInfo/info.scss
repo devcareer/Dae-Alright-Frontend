@@ -1,0 +1,59 @@
+.info {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 150px;
+    margin: 20px 0;
+    .img{
+        width: 150px;
+        height: 80px;
+    }
+    .name{
+        font-size: 16px;
+        margin: none;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .order{
+        display: flex;
+        justify-content: space-between;
+        color: rgba(0, 0, 0, 0.6);
+        & > * {
+            font-size: 12px;
+        }
+    }
+   
+    .review{
+        border-left: 1px solid grey;
+        height: 80px;
+        padding-left: 7px;
+.star{
+    color: #d6db46;
+    
+}
+span,
+.button {
+    margin-left: 1rem;
+}
+        .button{
+            color: white;
+            background: #d6db46;
+            outline: none;
+            border: none;
+        }
+        & > * {
+            margin: 4px;
+        }
+    }
+    
+}
+.load{
+    color: white;
+    background: #d6db46;
+    outline: none;
+    border: none;
+    margin-left: 17rem;
+    border-radius: none;
+}
