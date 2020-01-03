@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Homepage from '../src/Pages/Homepage';
 
 import { connect } from "react-redux";
 
@@ -10,7 +11,7 @@ class App extends Component {
   return (
 
     <div className="App">
-      
+     <Homepage/> 
      
     </div>
   
