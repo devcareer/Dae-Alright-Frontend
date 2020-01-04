@@ -1,0 +1,173 @@
+.paymentPageContainer {
+  .tab {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 0 1.2em;
+
+    @media (min-width:768px) {
+      flex-flow: row wrap;
+
+    }
+
+    .tabItems {
+      flex: 1;
+      padding-top: 3em;
+
+      @media (max-width:768px) {
+        padding-top: 1em;
+      }
+
+      h4 {
+        font-size: 1.3em;
+        font-style: normal;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      span {
+        display: flex;
+        height: 0.6em;
+        margin-bottom: 0.7em;
+        background: rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          cursor: pointer;
+          background: #d6db46;
+          transition: background 0.8s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .paymentDetails {
+    margin-top: 4.2em;
+    color: rgba(0, 0, 0, 0.6);
+
+    @media (min-width:768px) {
+      margin-left: 1em;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  }
+
+  .cardIllustration {
+    display: none;
+
+    @media (min-width:768px) {
+      display: flex;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        @media (min-width:768px) {
+          margin-left: -3em;
+        }
+
+        @media (min-width:1000px) {
+          margin-left: -5em;
+        }
+      }
+
+    }
+
+  }
+
+  .paymentForm {
+    display: flex;
+    flex-flow: column;
+
+    h5 {
+      color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      font-weight: bold;
+    }
+
+    form {
+      @media (min-width:768px) {
+        padding: 2em;
+      }
+
+      @media (min-width:990px) {
+        padding: 0 17em;
+      }
+
+      @media (min-width:1200px) {
+        padding: 0 20em;
+      }
+
+      input::placeholder {
+        position: relative;
+        left: 1em;
+      }
+
+      input {
+        width: 100%;
+        height: 3.3em;
+        margin-bottom: 1.5em;
+        background: #FFFFFF;
+        border: 1px solid #D4D4D4;
+        box-sizing: border-box;
+
+
+      }
+
+      .inputGroup {
+        display: flex;
+
+        .inputLeft {
+          margin-right: .7em;
+        }
+      }
+
+      .checkBox {
+        display: flex;
+
+        input {
+          width: 1.2em;
+        }
+
+        span {
+          color: rgba(0, 0, 0, 0.6);
+          margin: .9em 0 0 .3em;
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 3.3em;
+        background: #D6DB46;
+        color: #FFF;
+        border: none;
+        margin-bottom: 7em;
+
+        &:hover {
+          background: rgb(129, 133, 12);
+          transition: background .8s ease-in-out;
+        }
+      }
+    }
+  }
+  .orderNow{
+    margin-bottom: 5em;
+h2 {
+    color: #D6DB46;
+      @media (max-width:767px){
+    text-align: left;
+    font-size: 1.5em;
+    }
+    @media (min-width:768px){
+    margin-left: -13em;
+    }
+   
+  }
+  }
+  
+}
