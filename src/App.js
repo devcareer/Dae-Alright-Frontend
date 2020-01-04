@@ -18,10 +18,8 @@ class App extends Component {
      
 
   
-     <Homepage />
-
+     <RestauMenuPage />
     
-     <RestauMenuPage/>
     </div>
   
   );
