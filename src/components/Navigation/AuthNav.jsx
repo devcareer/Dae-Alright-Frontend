@@ -13,7 +13,7 @@ function AuthNav() {
    
     <Nav className="mr-auto">
     <Nav.Link className="nav-link" href="#">Overview</Nav.Link>
-      <Nav.Link className="nav-link"  href="#">Account Info</Nav.Link>
+      <Nav.Link className="nav-link"  href="/dashboard/information">Account Info</Nav.Link>
       <Nav.Link className="nav-link" href="#">Orders</Nav.Link>
       <Nav.Link className="nav-link" href="#">Refunds</Nav.Link>
       <Nav.Link className="nav-link" href="#">Message Center</Nav.Link>

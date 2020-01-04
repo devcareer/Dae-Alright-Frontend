@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Switch, Route} from 'react-router-dom'
-
 import { connect } from "react-redux";
 import Homepage from './Pages/Homepage';
+import Homepage from './Pages/Homepage'
+import UserDashboard from './Pages/user-dashboard';
+
 
 class App extends Component {
 
@@ -12,9 +14,9 @@ class App extends Component {
 
     <div className="App">
      <Switch>
-     <Route  path="/" component={Homepage} />
-       </Switch> 
-
+        <Route exact  path="/" component={Homepage} />
+        <Route exact path="/dashboard/information" component={UserDashboard} />
+     </Switch> 
      
 
     </div>
@@ -24,4 +26,4 @@ class App extends Component {
 
 }
 
-export default connect() (App);
+export default App;

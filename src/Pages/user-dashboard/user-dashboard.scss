@@ -1,0 +1,107 @@
+.dashboard {
+    overflow: hidden;
+}
+.user-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0 ;
+
+
+    .user-name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .user-plan {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.information {
+    margin: 4% 17%;
+
+    .information-header {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 351.56%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .image-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10%;
+        
+        
+
+        label.camera {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1em 0;
+            width: 200px;
+            border-radius: 50%;
+            background-image: url("https://res.cloudinary.com/dtbjhs8a6/image/upload/v1578128272/gffs5uctqukn7l6nj9wd.png");
+            background-size: cover;
+            height: 200px;
+            padding: 10px;
+            border: 2px solid #666;
+
+        }
+        label.camera input[getUserMedia*="camera"]{
+            display: none;
+        }
+       
+    }
+
+    .user-form {
+
+
+        .input-text {
+            border: 1px solid #D4D4D4;
+            box-sizing: border-box;
+            padding: 3%;
+            margin: 2%;
+        }
+        .button-text {
+            border: 1px solid #D4D4D4;
+            box-sizing: border-box;
+            padding-top: 2%;
+            padding-bottom: 5%;
+            margin: 2%;
+            color: white;
+            background: #D6DB46;
+        }
+    }
+      
+     
+}
+
+
+@media screen and (max-width: 1000px) {
+    .information {
+
+
+        .information-header {
+            line-height: 38px;
+        }
+
+        .user-form {
+            width: 100%;
+            padding: 2%;
+        }
+
+       
+    }
+}
