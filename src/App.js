@@ -4,23 +4,16 @@ import Homepage from '../src/Pages/Homepage';
 import { connect } from "react-redux";
 import './App.css';
 import { connect } from "react-redux"
-import Homepage from "../src/Pages/Homepage"
-
+import RestauMenuPage from '../src/Pages/Restaurant/RestauMenuPage'
 class App extends Component {
 
   render(){
   return (
 
     <div className="App">
-
-     <Homepage/> 
-     
-
   
-     <Homepage />
-
+     <RestauMenuPage />
     
-     <RestauMenuPage/>
     </div>
   
   );
