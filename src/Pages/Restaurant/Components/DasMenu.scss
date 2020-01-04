@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.dashmenu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.dash-button {
+  background-color: #ffffff;
+  color: #5c5b5bca;
+  border: none;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  width: 35%;
+  height: 10%;
+  &:hover {
+    background-color: #d6db46;
+    color: #ffffff;
+  }
+  &:focus {
+    background-color: #d6db46;
+    color: #fff;
+    border: 1px solid #d6db46;
+  }
+}
