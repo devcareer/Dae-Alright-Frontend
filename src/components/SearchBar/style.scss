@@ -2,16 +2,24 @@
     display: inline-block;
     background-color: #D6DB46;
     margin: 0 5% 0 1%;
-
+    
+    
+    &.white {
+            background-color: white;
+            box-shadow: 7px 50px 100px rgba(0, 0, 0, 0.15);
+        }
     @media screen and (max-width: 600px) {
         display: flex;
         flex-direction: row;
-        margin: 0 5% 0 5%;
+        margin: 0 5% 0  5%;
         
     }
 
+
+ 
+    
     .search-drop {
-        width: 27vmin;
+        width: 20vmin;
         height: 6vmin;
         margin: 3vmin 2vmin 3vmin 2vmin;
         border: 1px solid white;
@@ -46,6 +54,27 @@
 
         @media screen and (max-width: 600px) {
             width: 25%;
+        }
+    }
+
+    &.search-container-white {
+        background-color: white;
+        box-shadow: 7px 50px 100px rgba(0, 0, 0, 0.15);
+
+        .search-drop {
+            background: white;
+            color: #D6DB46;
+            border: 1P SOLID #e3e3e3;
+
+
+            &::placeholder {
+                color: #D6DB46;
+            }
+        }
+
+        .search-btn {
+            background: #d6db46;
+            color: white;
         }
     }
 }
