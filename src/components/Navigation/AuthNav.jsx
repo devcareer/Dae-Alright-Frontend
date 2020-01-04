@@ -1,6 +1,7 @@
 import React from "react";
 import {Navbar, Nav} from "react-bootstrap"
-import "../Navigation/AuthNav.scss"
+import "./AuthNav.scss"
+
 
 function AuthNav() {
   return (

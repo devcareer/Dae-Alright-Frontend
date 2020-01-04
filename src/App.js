@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { connect } from "react-redux"
-import Navigation from './components/Navigation/index'
-import AuthNav from "./components/Navigation/AuthNav"
-import SearchBar from './components/SearchBar';
+
+import UserDashboard from './Pages/Homepage/user-dashboard';
+
 
 
 
@@ -14,9 +14,7 @@ class App extends Component {
   return (
 
     <div className="App">
-     <Navigation />
-      <AuthNav />
-      <SearchBar /> 
+       <UserDashboard />
     </div>
   
   );

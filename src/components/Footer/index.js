@@ -62,19 +62,6 @@ function Footer() {
                 <p className='c'>&#xa9; Copyright 2018 Dae Alright! is a registered trademark</p>
 
             </div>
-                    <div className="row2col1">
-                        <ul className="row2item1">
-                              <li><a href="footer.js">FAQs</a></li>
-                             <li><a href="footer.js">Blog</a></li>
-                        </ul>
-                        <ul className="row2item2">
-                         <li><a href="footer.js">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <div className="row2col2">
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821215/my%20project/et9bmbe3mjhylwbfmree.png" alt="" />
-                        <img src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1571821216/my%20project/gix7baujoc1bqeczruru.png" alt="" />
-                    </div>
         
         </footer>
     )
