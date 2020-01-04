@@ -9,8 +9,8 @@ import {
   faGooglePlusG
 } from "@fortawesome/free-brands-svg-icons";
 import { signIn } from '../../../redux/actions/user'
-
-
+import {googleSignIn} from '../../../redux/actions/user'
+import {facebookSignIn} from '../../../redux/actions/user'
 class SignInModal extends Component {
   constructor(){
     super()
@@ -31,12 +31,19 @@ class SignInModal extends Component {
   
   onloginSubmit=(e)=>{
     e.preventDefault()
+
    this.props.signIn(this.state.password,this.state.email)
    
   }
-
+onFacebookSubmit = e =>{
+  e.preventDefault()
+  this.props.facebookSignIn()
+}
   
-
+onGoogleSubmit = e => {
+  console.log('press')
+  this.props.googleSignIn()
+}
 render(){
   
 const btnStyles = {
@@ -128,6 +135,7 @@ this.props.signInError && <div className='alert alert-danger' >{this.props.signI
           className="facebook-button"
           text={" Sign Up With Facebook"}
           style={btnColorStyles}
+          onClick={this.onFacebookSubmit}
           icons={
             <FontAwesomeIcon
               icon={faFacebookSquare}
@@ -140,6 +148,7 @@ this.props.signInError && <div className='alert alert-danger' >{this.props.signI
           className="google-button"
           text={" Sign Up With Google"}
           style={btnColorStyles}
+          onClick={this.onGoogleSubmit}
           icons={
             <FontAwesomeIcon
               icon={faGooglePlusG}
@@ -159,14 +168,15 @@ return <CustomModal show={this.props.showSignIn} title={titleJSX} body={bodyJSX}
 };
 const mapStateToProps =(state)=>{
  
-  const {signInError, signInLoading, signInSuccess, showSignIn} = state.userReducer
+  const {signInError, signInLoading, signInSuccess, showSignIn,  } = state.userReducer
   return {
     signInError,
     signInLoading,
     signInSuccess,
-    showSignIn
+    showSignIn,
+   
   }
 }
 
 
-export default connect(mapStateToProps, {signIn})(SignInModal)
+export default connect(mapStateToProps, {signIn, googleSignIn, facebookSignIn})(SignInModal)

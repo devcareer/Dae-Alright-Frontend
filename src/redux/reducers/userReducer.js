@@ -1,10 +1,13 @@
 import {
   SIGNIN_ACTION_SUCCESS,
   SIGNIN_ACTION_FAIL,
-  SAMPLE_ACTION,
   SIGNIN_ACTION,
   SIGNIN_ACTION_LOADING,
-  TOGGLE_SIGNIN
+  TOGGLE_SIGNIN,
+  GOOGLE_SIGNIN_ACTION,
+  GOOGLE_SIGNIN_ACTION_SUCCESS,
+  FACEBOOK_SIGNIN_ACTION,
+  FACEBOOK_SIGNIN_ACTION_SUCCESS
 } from "../constants/actionTypes";
 
 const initialState = {
@@ -27,9 +30,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SAMPLE_ACTION:
-      return action.payload;
-
+  
+    case FACEBOOK_SIGNIN_ACTION:
+    case GOOGLE_SIGNIN_ACTION:
     case SIGNIN_ACTION:
       return {
         ...state,
@@ -44,8 +47,10 @@ export default (state = initialState, action) => {
         ...state,
         signInError: action.message,
         signInLoader: false,
-        user: ''
+        user: ""
       };
+    case FACEBOOK_SIGNIN_ACTION_SUCCESS:
+    case GOOGLE_SIGNIN_ACTION_SUCCESS:
     case SIGNIN_ACTION_SUCCESS:
       return {
         ...state,
@@ -58,11 +63,12 @@ export default (state = initialState, action) => {
         ...state,
         signInLoading: action.loader
       };
-      case TOGGLE_SIGNIN:
-          return{
-              ...state,
-              showSignIn:action.showSignIn
-          }
+    case TOGGLE_SIGNIN:
+      return {
+        ...state,
+        showSignIn: action.showSignIn
+      };
+
     default:
       return state;
   }
