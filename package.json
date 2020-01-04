@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/devcareer/Dae-Alright-Frontend/issues"
   },
-  "homepage": "https://github.com/devcareer/Dae-Alright-Frontend#readme",
+  "homepage": ".",
   "eslintConfig": {
     "extends": "react-app"
   },
