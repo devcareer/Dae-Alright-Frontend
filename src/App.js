@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
-import { connect } from "react-redux"
 
 import UserDashboard from './Pages/Homepage/user-dashboard';
 
-
-
-import { connect } from "react-redux";
 
 
 class App extends Component {
@@ -25,4 +21,4 @@ class App extends Component {
 
 }
 
-export default connect() (App);
+export default App;
