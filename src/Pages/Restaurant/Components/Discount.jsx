@@ -3,7 +3,7 @@ import offers from "../../../assets/offers.svg";
 import "./Discounts.scss";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import goodfood from "../../../assets/";
+import goodfood from "../../../assets/goodfood.svg";
 
 const Discount = () => {
   return (

@@ -5,12 +5,12 @@
   display: flex;
   margin-left: 2%;
   line-height: 1;
-  margin-top: 5%;
+  margin-top: 3%;
   font-family: "Roboto", sans-serif;
 }
 .restaurant-title {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 46px;
   color: rgba(0, 0, 0, 0.6);
   line-height: 50px;
 }
@@ -42,7 +42,8 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .menu-link {
