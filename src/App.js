@@ -8,7 +8,7 @@ import SignIn from './components/Modal/SignInModal'
 import Navigation from './components/Navigation'
 import AuthNav from './components/Navigation/AuthNav'
 class App extends Component {
-
+ w
   render(){
   return (
 
