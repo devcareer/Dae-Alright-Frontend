@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux'
 import CustomModal from "../CustomModal";
+import {Link } from 'react-router-dom'
 import "./index.scss";
 import Button from "../../Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -128,7 +129,7 @@ this.props.signInError && <div className='alert alert-danger' >{this.props.signI
       
       
       <p className="not-signed-in">
-        Not Signed In? <span className="sign-up">Sign Up</span>
+        Not Signed In? <Link className="sign-up">Sign Up</Link>
       </p>
       <div className="btnCollection">
         <Button

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux"
 import restaurantReducer from "./restaurantReducer"
-import userReducer from "./userReducer.signin."
+import userReducer from "./userReducer"
 
 
 export default combineReducers ({
