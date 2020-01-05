@@ -1,0 +1,72 @@
+.cart {
+  
+  .center {
+    margin: 0 auto;
+  }
+  .fix {
+    width: 95%;
+    margin: 0 auto;
+
+
+    .txt {
+      width: 408px;
+      height: 59px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 59px;
+      margin-left: 2rem;
+      margin-top: 2.5rem;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .ptxt {
+      position: absolute;
+      width: 186px;
+      height: 26px;
+      min-height: 5rem;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 1rem;
+      color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .line {
+    width: 1301.96px;
+    height: 0px;
+    border: 1px solid #e3e3e3;
+  }
+  .sub {
+    margin-top: 3rem !important ;
+  }
+  .item {
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
+  .get-mobile-searchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .get-mobile-search-header {
+    margin-right: 33%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 22px;
+    color: #d6db46;
+  }
+  .ad {
+    margin-top: 30rem;
+  }
+}

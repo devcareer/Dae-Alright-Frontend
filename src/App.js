@@ -9,6 +9,7 @@ import ReviewOrder from './Pages/ReviewOrder'
 import DashboardOrder from './Pages/user-dashboard/order-dashboard';
 import OrderRefund from "./Pages/user-dashboard/dashboard-refund"
 
+import Cart from './Pages/shopping-cart';
 
 
 
@@ -28,6 +29,7 @@ class App extends Component {
 
         <Route exact path="/dashboard/order" component={DashboardOrder} />
         <Route exact path="/dashboard/refund" component={OrderRefund} />
+        <Route exact path='/cart' component={Cart} />
      </Switch> 
     
     </div>
