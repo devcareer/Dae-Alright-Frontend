@@ -40,14 +40,14 @@
       justify-content: center;
 
       &:first-child {
-        width: 40%;
+        width: 50%;
       }
       &:nth-child(2),
       &:nth-child(3) {
         width: 15%;
       }
       &:last-child {
-        width: 30%;
+        width: 20%;
       }
     }
   }

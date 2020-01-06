@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Order from '../ordered-item/index'
+
 import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './cartitem.scss';
@@ -14,7 +16,7 @@ const Cartitem = ( ) => (
         </p>
         <div className="item-details">
         <div className="header-block">
-            <span>Product name & Description</span>
+            <span>Product name & Detail</span>
           </div>
           {/* <div className="header-block">
             <span>Description</span>
@@ -29,6 +31,7 @@ const Cartitem = ( ) => (
             <span>Delivery Details</span>
           </div>
         </div>
+          <Order />
     </div>
 )
 
