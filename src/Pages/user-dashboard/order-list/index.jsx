@@ -3,6 +3,7 @@ import "./order-list.scss"
 import RestaurantOrderList from "../restaurant-order-list"
 
 function OrderList(props) {
+    console.log(props.summary)
     return (
         <div className="order-list">
             <RestaurantOrderList 
@@ -15,18 +16,6 @@ function OrderList(props) {
                  summary="#100"
                  delivery="45Min - 1hr"
             />
-            <div className="order-btn-div">
-                <div className="order-total">
-                    <p className="paragraph-order">Subtotal: <strong>{props.price}</strong></p>
-                    <div>
-                         <p className="paragraph-order">Shipping: <strong>{props.summary}</strong></p>
-                         <p className="paragraph-order">Total: <strong>{`${props.price} + ${props.summary}`}</strong></p>
-                    </div>
-                </div>
-                
-                <button className="order-btn" type="submit">Add to Cart</button>
-                <button className="order-btn" type="submit">Delete</button>
-            </div>
         </div>
     )
 }

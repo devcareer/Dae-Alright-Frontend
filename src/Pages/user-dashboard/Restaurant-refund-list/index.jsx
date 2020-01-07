@@ -1,15 +1,13 @@
 import React from "react"
-import "./restaurant-order-list.scss"
+import "../restaurant-order-list/restaurant-order-list.scss"
 
-function RestaurantOrderList(props) {
-    const totalPrice = `${props.price} + ${props.summary}`
+function RestaurantRefundList(props) {
     return (
-        <div>
+        <div className="restaurant-refund">
                 <div className="order-restaurant">
                     <p className="paragraph-order">Restaurant: <strong>{props.restaurantName}</strong></p>
                     <p className="paragraph-order"><img className="order-restaurant-image" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1578351991/rkxz0f0aqwzh9imsrosw.png" alt="" /><strong>Message Restaurant</strong></p>
                 </div>
-            
 
              <div className="order-list_div">
                 <div className="order-list_div_div">
@@ -21,7 +19,6 @@ function RestaurantOrderList(props) {
                             <p className="paragraph-order">ID: {props.id}</p> 
                             <div className="hidden">
                                 <p className="paragraph-order">Price: {props.price}</p>
-                                <p className="paragraph-order">Delivery fee: {props.summary}</p>
                             </div>
                        </div>   
                     </div>
@@ -41,28 +38,17 @@ function RestaurantOrderList(props) {
                     <p className="paragraph-order"><strong>{props.price}</strong></p> 
                 </div>
                 <div className="mobile-hidden">
-                    <p className="order-list_div_paragraph">Summary</p>
+                    <p className="order-list_div_paragraph">Date</p>
                     <br />
-                    <p className="paragraph-order"><strong>{props.summary}</strong></p> 
-                    <p className="paragraph-order">Delivery Time:<strong>{props.delivery}</strong></p>
-                    
+                    <p className="paragraph-order"><strong>{props.date}</strong></p>     
                 </div>
             </div>
-
             <div className="order-btn-div">
-                <div className="order-total">
-                    <p className="paragraph-order">Subtotal: <strong>{props.price}</strong></p>
-                    <div>
-                         <p className="paragraph-order">Shipping: <strong>{props.summary}</strong></p>     
-                         <p className="paragraph-order">Total: <strong>{totalPrice}</strong></p>
-                    </div>
-                </div>
-                
-                <button className="order-btn" type="submit">Add to Cart</button>
+                <button className="order-btn" type="submit">Cancel Refund</button>
                 <button className="order-btn" type="submit">Delete</button>
             </div>
          </div>
     )
 }
 
-export default RestaurantOrderList
+export default RestaurantRefundList
