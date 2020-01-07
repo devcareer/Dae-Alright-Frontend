@@ -1,22 +1,14 @@
 import React from "react"
 import "./user-dashboard.scss"
-import AuthNav from "../../components/Navigation/AuthNav"
-import Navigation from "../../components/Navigation"
 import Details from "../../components/Details"
 import Footer from "../../components/Footer"
+import DashboardHeader from "./dashboard-header/index" 
 
 
 function UserDashboard() {
     return (
         <div className="dashboard">
-            <Navigation />
-                <div className="user-detail">
-                    <img className="" src="https://res.cloudinary.com/dtbjhs8a6/image/upload/v1578128272/gffs5uctqukn7l6nj9wd.png" alt="" />
-                    <h2 className="user-name">Richard Williams</h2>
-                    <p className="user-plan">Gold Member</p>
-                </div>
-            <AuthNav />
-
+            <DashboardHeader />
             <div className="information">
                 <h1 className="information-header">Account Information</h1>
                 <div className="image-input">
