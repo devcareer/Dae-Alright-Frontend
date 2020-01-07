@@ -1,0 +1,149 @@
+.tab {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 0 1.2em;
+
+  @media (min-width:768px) {
+    flex-flow: row wrap;
+
+  }
+
+  .tabItems {
+    flex: 1;
+    padding-top: 3em;
+
+    @media (max-width:768px) {
+      padding-top: 1em;
+    }
+
+    h4 {
+      font-size: 1.3em;
+      font-style: normal;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      color: grey;
+      margin: 1rem;
+    }
+
+
+
+    span {
+      display: flex;
+      background: #d6db46;
+      height: 0.6em;
+      margin-bottom: 0.7em;
+
+
+      &:hover {
+        cursor: pointer;
+
+      }
+
+      &:first-child {
+
+        background: rgba(0, 0, 0, 0.6);
+        ;
+
+
+      }
+    }
+  }
+}
+
+.paymentDetails {
+  margin-top: 4.2em;
+  color: rgba(0, 0, 0, 0.6);
+
+  @media (min-width:768px) {
+    margin-left: 1em;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+}
+
+.cardIllustration {
+  display: none;
+
+  @media (min-width:768px) {
+    display: flex;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @media (min-width:768px) {
+        margin-left: -3em;
+      }
+
+      @media (min-width:1000px) {
+        margin-left: -5em;
+      }
+    }
+
+  }
+
+}
+
+.orderNow {
+  margin-bottom: 5em;
+
+  h2 {
+    color: #D6DB46;
+
+    @media (max-width:767px) {
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    @media (min-width:768px) {
+      margin-left: -13em;
+    }
+
+  }
+}
+
+
+.reviewBody {
+  padding: 2rem ;
+}
+
+.reviewBox {
+  border: 2px solid #E3E3E3;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  margin:2rem 0;
+}
+
+
+.resturantAboutOrderRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resturantOrderRow {
+  display: flex;
+  width: 100%;
+
+  .resturantOrderRowLeft {
+    justify-content: flex-start;
+    justify-content: space-around;
+  }
+
+  .resturantOrderRowRight {
+    justify-content: space-between;
+
+  }
+}
+.iconClass{
+  color:gray;
+  margin-right: 1rem;
+}
