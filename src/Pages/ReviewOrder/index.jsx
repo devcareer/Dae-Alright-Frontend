@@ -3,7 +3,7 @@ import React from 'react'
 import Footer from "../../components/Footer/Footer";
 import SearchBar from "../../components/SearchBar";
 import Navigation from '../../components/Navigation'
-import Button from '../../components/Button'
+import ReviewOrderItem from '../../components/reviewOrderItem/'
 import classes from './reviewOrder.module.scss'
 import './reviewOrder.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -85,6 +85,7 @@ Message Restaurant</p>
 
               
             </div>
+            <ReviewOrderItem/>
           </div>
 
        

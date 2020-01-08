@@ -43,49 +43,11 @@
 
       height: 0.6em;
       margin-bottom: 0.7em;
-      background-color: #a5a5a5;
+      background-color:#939393;
 
 
     }
   }
-}
-
-.paymentDetails {
-  margin-top: 4.2em;
-  color: rgba(0, 0, 0, 0.6);
-
-  @media (min-width:768px) {
-    margin-left: 1em;
-  }
-
-  h3 {
-    font-weight: bold;
-    font-size: 1.3em;
-  }
-}
-
-.cardIllustration {
-  display: none;
-
-  @media (min-width:768px) {
-    display: flex;
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-
-      @media (min-width:768px) {
-        margin-left: -3em;
-      }
-
-      @media (min-width:1000px) {
-        margin-left: -5em;
-      }
-    }
-
-  }
-
 }
 
 .orderNow {
@@ -134,13 +96,11 @@
 
   .resturantOrderRowLeft {
     justify-content: flex-start;
-    width: 50%
+    width: 43%
   }
 
   .resturantOrderRowRight {
     display: flex;
-
-
     margin: 0 auto;
     justify-content: space-between;
   }

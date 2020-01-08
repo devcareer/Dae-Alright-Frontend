@@ -1,25 +1,47 @@
 import React from 'react';
-import './review-order-item';
+import './review-order-item.scss';
 
-const ReviewOrderItem = () => {
-  const { imageUrl, price, name, quantity } = cartItem
-  return (
-    <div className="checkout-item">
-      <div className="image-container">
-        <img src={imageUrl} alt="item" />
+const ReviewOrderItem = () => (
+ 
+  <div className="item-ordered">
+    <div className="detail">
+      <div className="header-block">
+        <span className="box"></span>
+        <span className="res">
+          <section>
+            <h4 className="food">
+              Chicken Tandori special 12' deep
+            </h4>
+            <h5 className="spice">
+              Cheese, tomatoe, Italian spice
+            </h5>
+            <h6 className="id">ID 112345566</h6>
+          </section>
+        </span>
       </div>
-
-      <span className="name">{name}</span>
-      <span className="quantity">
-        <div className="arrow" onClick={()=> removeItem(cartItem)}>&#10094;</div>
-       <span className="value"> {quantity}</span>
-        <div className="arrow" onClick={()=> addItem(cartItem)}>&#10095;</div>
-      </span>
-      <span className="price">{price}</span>
-      <div className="remove-button" onClick={() => clearItem(cartItem)}>&#10005;</div>
-
+      <div className="header-block">
+          <span>&lt;</span>
+          <span>1</span> 
+          <span>&gt;</span>
+        </div>
+        <div className="header-block">
+          <span>#400</span>
+        </div>
+        <div className="header-block">
+          <span>#100</span>
+          <span>Delivery Time: 45min-1hr</span>
+        </div>
     </div>
-  )
-}
+  <div className="total">
+    <span className="breakdown">
+      <p>Subtotal: #400</p>
+      <p>Shipping: #100</p>
+    </span>
+    <span class='T'>Total: #500</span>
+  </div>
+  
+  </div>
+)
 
-export default ReviewOrderItem; cxz
+
+export default ReviewOrderItem; 
