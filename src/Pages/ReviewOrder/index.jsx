@@ -1,7 +1,11 @@
-import ta from '../../payment-gateway.png'
+
 import React from 'react'
-import Navigation from '../../components/Navigation/index'
+import Footer from "../../components/Footer/Footer";
+import SearchBar from "../../components/SearchBar";
+import Navigation from '../../components/Navigation'
+import Button from '../../components/Button'
 import classes from './reviewOrder.module.scss'
+import './reviewOrder.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -16,7 +20,8 @@ const ReviewOrder = () => (
     <section className={classes.tab}>
       <div className={classes.tabItems}>
         <h4>Review your Order</h4>
-        <span ></span>
+        < div className ={classes.spanColor} ></div>
+        
       </div>
       <div className={classes.tabItems}>
         <h4>Payment</h4>
@@ -69,19 +74,39 @@ Message Restaurant</p>
               <p>Product Name &amp; Details</p>
             </div>
             <div className={classes.resturantOrderRowRight}>
-              <p>Quality</p>
-              <p>Price</p>
-              <p>Delivery Details</p>
+              <span>Quality</span>
+              </div>
+              <div className={classes.resturantOrderRowRight}>
+              <span>Price</span>
+              </div>
+              <div className={classes.resturantOrderRowRight}>
+              <span>Delivery Details</span>
+              </div>
+
+              
             </div>
           </div>
 
-        </div>
+       
         <h4>3. Payment:</h4>
         <div className={classes.reviewBox}>
           <p><input type="radio" /> Pay on Delivery <br /></p>
           <p><input type="radio" checked /> Pay with Cards <img src='https://res.cloudinary.com/bamiogunfemi/image/upload/v1578419498/payment-gateway_lt30oz.png' alt="Payment Gateway" /> <br /></p>
 
         </div>
+        <div className={classes.proceedBox}>
+        <p>Your Total : <span className={classes.colorGreen}>#500</span></p>
+        <button>Proceed to Payment</button>
+       
+        </div>
+
+        <div className={classes.orderNow}>
+        <center>
+          <h2>Order Now!</h2>
+          <SearchBar whitebackground />
+        </center>
+      </div>
+      <Footer />
       </div>
   </>
 

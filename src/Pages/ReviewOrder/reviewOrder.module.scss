@@ -4,6 +4,7 @@
   text-align: center;
   padding: 0 1.2em;
 
+
   @media (min-width:768px) {
     flex-flow: row wrap;
 
@@ -25,31 +26,26 @@
     }
 
     p {
-      color: grey;
+      color: #a5a5a5;
       margin: 1rem;
     }
 
+    .spanColor {
+      display: flex;
 
+      height: 0.6em;
+      margin-bottom: 0.7em;
+      background-color: #D6DB46
+    }
 
     span {
       display: flex;
-      background: #d6db46;
+
       height: 0.6em;
       margin-bottom: 0.7em;
+      background-color: #a5a5a5;
 
 
-      &:hover {
-        cursor: pointer;
-
-      }
-
-      &:first-child {
-
-        background: rgba(0, 0, 0, 0.6);
-        ;
-
-
-      }
     }
   }
 }
@@ -112,15 +108,15 @@
 
 
 .reviewBody {
-  padding: 2rem ;
+  padding: 2rem;
 }
 
 .reviewBox {
-  border: 2px solid #E3E3E3;
+  border: 1px solid #E3E3E3;
   padding: 2rem;
   height: 100%;
   width: 100%;
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 
 
@@ -132,18 +128,75 @@
 .resturantOrderRow {
   display: flex;
   width: 100%;
+  flex-direction: row;
+
+  margin: 50px auto 0;
 
   .resturantOrderRowLeft {
     justify-content: flex-start;
-    justify-content: space-around;
+    width: 50%
   }
 
   .resturantOrderRowRight {
+    display: flex;
+
+
+    margin: 0 auto;
     justify-content: space-between;
+  }
+}
+
+.iconClass {
+  color: gray;
+  margin-right: 1rem;
+}
+
+.orderNow {
+  margin-bottom: 5em;
+
+  h2 {
+    color: #D6DB46;
+
+    @media (max-width:767px) {
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    @media (min-width:768px) {
+      margin-left: -13em;
+    }
 
   }
 }
-.iconClass{
-  color:gray;
-  margin-right: 1rem;
+
+.proceedBox {
+
+  @media (min-width:767px) {
+    padding: 1rem;
+    border: 1px solid #E3E3E3;
+    height: 100%;
+    width: 30%;
+    margin: 10% auto;
+    text-align: center;
+  }
+
+  @media (max-width:767px) {
+    padding: 1rem;
+    border: 1px solid #E3E3E3;
+    height: 100%;
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+  }
+}
+
+.colorGreen {
+  color: #D6DB46
+}
+
+button {
+  margin-bottom: 1rem;
+  color: white;
+  border: none;
+  background-color: #D6DB46;
 }

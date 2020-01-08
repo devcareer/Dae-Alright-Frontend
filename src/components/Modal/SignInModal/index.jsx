@@ -72,7 +72,7 @@ const bodyJSX = () => (
         <Button
           className="facebook-button"
           text={" Sign Up With Facebook"}
-          style={btnColorStyles}
+          style={btnColorStyle}
           icons={
             <FontAwesomeIcon
               icon={faFacebookSquare}
