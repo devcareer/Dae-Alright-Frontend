@@ -53,8 +53,6 @@ function RestaurantInfo() {
                     <TabPanel>
                         <RestaurantInfoTabThree />
                     </TabPanel>
-                    
-                    
 
                 </Tabs>
                 <div className='right-main-section'></div>
