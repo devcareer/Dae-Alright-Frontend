@@ -4,7 +4,8 @@ import {Switch, Route} from 'react-router-dom'
 import RestauMenuPage from './Pages/Restaurant/RestauMenuPage'
 import Homepage from './Pages/Homepage'
 import UserDashboard from './Pages/user-dashboard';
-
+import DashboardOrder from './Pages/user-dashboard/order-dashboard';
+import OrderRefund from "./Pages/user-dashboard/dashboard-refund"
 
 
 
@@ -16,9 +17,11 @@ class App extends Component {
 
     <div className="App">
      <Switch>
-        <Route exact  path="/" component={Homepage} />
+        <Route exact path="/" component={Homepage} />
         <Route exact path="/dashboard/information" component={UserDashboard} />
         <Route exact path="/restaurant/menu" component={RestauMenuPage} />
+        <Route exact path="/dashboard/order" component={DashboardOrder} />
+        <Route exact path="/dashboard/refund" component={OrderRefund} />
      </Switch> 
     
     </div>
