@@ -2,7 +2,7 @@ import React from 'react'
 
 import './restaurant-info-tab-one.styles.scss'
 
-import Button from'../Button/index'
+import Button from'../../../components/Button/index'
 
 
 const RestaurantInfoTabOne = () => (

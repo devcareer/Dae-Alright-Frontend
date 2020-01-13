@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@mixin  restaurant-info-page-media-query($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
+    
+}
+
+@mixin review-card {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 5%;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    box-shadow: 7px 35px 100px rgba(0, 0, 0, 0.1);
+    margin-bottom: 22px; 
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+}
+.for-dots{
+    
+    display: flex;
+    justify-content: flex-end;
+}
+.dots{
+    width: 40px;
+    margin: 0px;
+    line-height: 10px;
+    font-size: 50px;
+}
+.middle-main-section-bodies-reviews {
+    margin: 0px;
+    border: 1px solid #FFFFFF;
+    font-size: 15px;
+
+    .restaurant-review-card{
+        @include review-card;
+
+        .restaurant-reviewers-section{
+            line-height: 0px;
+
+            .restaurant-reviewers-name{
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(0, 0, 0, 0.4);
+            }
+
+            .restaurant-reviewers-topic{
+                font-size: 18px;
+                color: rgba(0, 0, 0, 0.6)
+            }
+
+            
+        }
+
+        .restaurant-reviewers-date{
+            margin-top: 20px;
+            margin-bottom: 0px;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 12px;
+            color: rgba(0, 0, 0, 0.4);
+        }
+
+        .restaurant-reviewers-details{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        
+    }
+    .restaurant-review-card:nth-child(1){
+        margin-bottom: 0px;
+        padding-bottom: 18px;
+        display: flex;
+        justify-content: flex-end;
+
+        .for-newest-reviews{
+            border: 1px solid rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .second-to-last{
+        margin-bottom: 0px;
+    }
+}

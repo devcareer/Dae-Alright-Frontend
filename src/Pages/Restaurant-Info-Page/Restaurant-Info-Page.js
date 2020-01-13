@@ -6,14 +6,14 @@ import 'react-tabs/style/react-tabs.css'
 import './Restaurant-Info-Page.style.scss'
 
 import Footer from '../../components/Footer/index'
-import RestaurantInfoTabThree from '../../components/Restaurant-info-tabs/restaurant-info-tab-three'
-import RestaurantInfoTabTwo from '../../components/Restaurant-info-tabs/restaurant-info-tab-two'
-import RestaurantInfoTabOne from '../../components/Restaurant-info-tabs/restaurant-info-tab-one'
+import RestaurantInfoTabThree from './Restaurant-info-tabs/restaurant-info-tab-three'
+import RestaurantInfoTabTwo from './Restaurant-info-tabs/restaurant-info-tab-two'
+import RestaurantInfoTabOne from './Restaurant-info-tabs/restaurant-info-tab-one'
 
 function RestaurantInfo() {
     return (
         <body className='restaurant-page'>
-            <header className='restaurant-page-header'></header>
+            <header className='restaurant-page-header'>Header</header>
             <main className='restaurant-page-main'>
                 <div className='left-main-section'> Left</div>
 
