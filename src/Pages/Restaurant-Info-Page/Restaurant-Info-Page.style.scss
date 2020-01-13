@@ -26,6 +26,7 @@
 
     .left-main-section{
         width: 20%;
+        border: 2px solid red;
         @include restaurant-info-page-media-query(600px){
             width: 50%;
             margin-right: auto;
@@ -80,14 +81,16 @@
                 color: #FFFFFF;
             }
         }
-
-    .right-main-section{
-        width: 20%;
-        @include restaurant-info-page-media-query(600px){
-            display: none;
-        }
-        }
 }
+}
+
+.right-main-section{
+    width: 20%;
+    border: 2px solid red;
+    text-align: center;
+    @include restaurant-info-page-media-query(600px){
+        display: none;
+    }
 }
 
 
