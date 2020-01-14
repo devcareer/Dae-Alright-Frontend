@@ -1,0 +1,163 @@
+.tab {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  padding: 0 1.2em;
+
+
+  @media (min-width:768px) {
+    flex-flow: row wrap;
+
+  }
+
+  .tabItems {
+    flex: 1;
+    padding-top: 3em;
+
+    @media (max-width:768px) {
+      padding-top: 1em;
+    }
+
+    h4 {
+      font-size: 1.3em;
+      font-style: normal;
+      font-weight: normal;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    p {
+      color: #a5a5a5;
+      margin: 1rem;
+    }
+
+    .spanColor {
+      display: flex;
+
+      height: 0.6em;
+      margin-bottom: 0.7em;
+      background-color: #D6DB46
+    }
+
+    span {
+      display: flex;
+
+      height: 0.6em;
+      margin-bottom: 0.7em;
+      background-color:#939393;
+
+
+    }
+  }
+}
+
+.orderNow {
+  margin-bottom: 5em;
+
+  h2 {
+    color: #D6DB46;
+
+    @media (max-width:767px) {
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    @media (min-width:768px) {
+      margin-left: -13em;
+    }
+
+  }
+}
+
+
+.reviewBody {
+  padding: 2rem;
+}
+
+.reviewBox {
+  border: 1px solid #E3E3E3;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+
+.resturantAboutOrderRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resturantOrderRow {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+
+  margin: 50px auto 0;
+
+  .resturantOrderRowLeft {
+    justify-content: flex-start;
+    width: 43%
+  }
+
+  .resturantOrderRowRight {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
+
+.iconClass {
+  color: gray;
+  margin-right: 1rem;
+}
+
+.orderNow {
+  margin-bottom: 5em;
+
+  h2 {
+    color: #D6DB46;
+
+    @media (max-width:767px) {
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    @media (min-width:768px) {
+      margin-left: -13em;
+    }
+
+  }
+}
+
+.proceedBox {
+
+  @media (min-width:767px) {
+    padding: 1rem;
+    border: 1px solid #E3E3E3;
+    height: 100%;
+    width: 30%;
+    margin: 10% auto;
+    text-align: center;
+  }
+
+  @media (max-width:767px) {
+    padding: 1rem;
+    border: 1px solid #E3E3E3;
+    height: 100%;
+    width: 100%;
+    margin: 10% auto;
+    text-align: center;
+  }
+}
+
+.colorGreen {
+  color: #D6DB46
+}
+
+button {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: white;
+  border: none;
+  background-color: #D6DB46;
+}
