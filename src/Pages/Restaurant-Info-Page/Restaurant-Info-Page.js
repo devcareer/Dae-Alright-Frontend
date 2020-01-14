@@ -6,6 +6,10 @@ import 'react-tabs/style/react-tabs.css'
 import './Restaurant-Info-Page.style.scss'
 
 import Footer from '../../components/Footer/index'
+import Head from '../../Pages/Restaurant/Components/Header'
+import FoodMenu from '../../Pages/Restaurant/Components/FoodMenu'
+import Discount from '../../Pages/Restaurant/Components/Discount'
+
 import RestaurantInfoTabThree from './Restaurant-info-tabs/restaurant-info-tab-three'
 import RestaurantInfoTabTwo from './Restaurant-info-tabs/restaurant-info-tab-two'
 import RestaurantInfoTabOne from './Restaurant-info-tabs/restaurant-info-tab-one'
@@ -13,9 +17,9 @@ import RestaurantInfoTabOne from './Restaurant-info-tabs/restaurant-info-tab-one
 function RestaurantInfo() {
     return (
         <body className='restaurant-page'>
-            <header className='restaurant-page-header'>Header</header>
+            <header className='restaurant-page-header'><Head/></header>
             <main className='restaurant-page-main'>
-                <div className='left-main-section'> Left</div>
+                <div className='left-main-section'> <FoodMenu/> </div>
 
                 <Tabs className='middle-main-section'>
                     <TabList className='middle-main-section-titles'>
@@ -40,7 +44,7 @@ function RestaurantInfo() {
                     </TabPanel>
 
                 </Tabs>
-                <div className='right-main-section'>right</div>
+                <div className='right-main-section'><Discount/></div>
             </main>
             
             <Footer />

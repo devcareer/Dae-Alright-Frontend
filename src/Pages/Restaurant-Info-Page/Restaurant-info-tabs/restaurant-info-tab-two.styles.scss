@@ -36,7 +36,6 @@
 }
 .middle-main-section-bodies-reviews {
     margin: 0px;
-    border: 1px solid #FFFFFF;
     font-size: 15px;
 
     .restaurant-review-card{
@@ -77,7 +76,14 @@
         }
         
     }
-    .restaurant-review-card:nth-child(1){
+    .restaurant-review-card:nth-last-child(){
+        margin-bottom: 0px;
+    }
+    .loading-more{
+        @include review-card;
+    }
+    .restaurant-review-filter{
+        @include review-card;
         margin-bottom: 0px;
         padding-bottom: 18px;
         display: flex;

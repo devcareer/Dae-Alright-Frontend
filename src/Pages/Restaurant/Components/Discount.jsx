@@ -14,7 +14,7 @@ const Discount = () => {
             src={offers}
             className="discount-image"
             height="400px"
-            width="301px"
+            width="100%"
             alt="offers and discounts"
           />
           <div className="discount">
