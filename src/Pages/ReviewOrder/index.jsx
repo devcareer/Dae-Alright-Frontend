@@ -96,7 +96,7 @@ Message Restaurant</p>
 
         </div>
         <div className={classes.proceedBox}>
-        <p>Your Total : <span className={classes.colorGreen}>#500</span></p>
+        <p>All Total : <span className={classes.colorGreen}>#500</span></p>
         <button>Proceed to Payment</button>
        
         </div>
