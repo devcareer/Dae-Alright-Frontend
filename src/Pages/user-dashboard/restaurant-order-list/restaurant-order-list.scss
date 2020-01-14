@@ -1,0 +1,18 @@
+.restaurant-refund {
+    border: 1px solid #E3E3E3;
+    box-sizing: border-box;
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+.order-restaurant-image {
+    border:  1px solid #D6DB46;
+    height: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .restaurant-refund {
+        height: 400px;
+    }
+    
+}

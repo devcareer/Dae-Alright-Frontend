@@ -1,0 +1,41 @@
+.header-txt{
+    margin-left: 3rem;
+
+.fresh {
+margin-top: 6.5vh;
+line-height: 1.6;
+    .colored-txt{
+        color: darkkhaki;
+        .amp{
+            color: rgba(0,0,0, .5);
+        }
+    }
+    .sm-txt{
+        font-weight: 300;
+        font-size: 14px;
+        color: #ccc
+
+    }
+}
+.discover {
+    margin-top: 8vh;
+    .text{
+        font-size: 2rem;
+        word-spacing: 5px;
+        color: rgba(0,0,0, .5)
+    }
+}}
+ .result{
+     display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin: 10px auto;
+  h3{
+      margin-left: 1rem;
+      font-size: 1rem;
+  }
+  select{
+      border: none;
+      outline: none;
+  }
+}

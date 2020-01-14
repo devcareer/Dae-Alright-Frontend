@@ -1,0 +1,34 @@
+h2,
+h6 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1em;
+}
+
+form {
+  padding: 0 1.5em;
+  .form-input {
+    margin: 1em;
+  }
+  span {
+    color: #d6db46;
+    cursor: pointer;
+  }
+}
+
+@keyframes donut-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  display: inline-block;
+  border: 4px solid rgba(44, 42, 42, 0.1);
+  border-left-color: #5861d8;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: donut-spin 1.2s linear infinite;
+}

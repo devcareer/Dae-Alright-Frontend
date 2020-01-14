@@ -1,0 +1,61 @@
+
+.order-section {
+    margin: 0 10%;
+}
+.order-head {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    color: rgba(0, 0, 0, 0.6);
+}
+.order-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.order-button {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    height: 45px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #D6DB46;
+}
+
+.order-select {
+    border:  1px solid #E3E3E3;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.buttons {
+    background-color: #D6DB46;
+    padding: 10px;
+    width: 200px;
+    color: white;
+    border: none;
+}

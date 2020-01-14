@@ -1,0 +1,32 @@
+
+summary::-webkit-details-marker {
+    display: none
+  }
+  summary {
+      width: 95%;
+      font-size: 18px;
+      line-height: 23px;
+      color: rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      margin-left: 4%;
+      border: 1px solid#D4D4D4;
+  }
+  summary:after {
+    
+    border-radius: 5px;
+    content: ">";
+    color: grey;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5%;
+    text-align: center;
+    width: 20px;
+  }
+  details[open] summary:after {
+    content: "-";
+  }
+  .paragraph {
+    margin-left: 4%;
+    padding: 8px;
+  }
