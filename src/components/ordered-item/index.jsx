@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import Button from '../Button/index';
 
 import './order.scss'
 
@@ -37,7 +39,9 @@ const Order = () => (
         <p>Subtotal: #400</p>
         <p>Shipping: #100</p>
       </span>
-      <span class='T'>Total: #500</span>
+      <span class='T'>Total: #500</span>      
+      <Button  className='button-sm b' text='Buy'/>
+      
     </div>
     
     </div>
