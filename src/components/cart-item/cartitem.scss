@@ -1,0 +1,54 @@
+.cartitem {
+  border-top: 1px solid #eee;
+  margin: 0.5rem auto;
+
+  .q {
+    margin-top: 1rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    width: 27.5rem;
+    color: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: space-between;
+  }
+  .button{
+    outline: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+   .m{
+    color: #d6db46;
+    margin-left: .2rem;
+   }
+  }
+  .item-details {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+
+    .header-block {
+      text-transform: capitalize;
+      justify-content: center;
+
+      &:first-child {
+        width: 50%;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        width: 15%;
+      }
+      &:last-child {
+        width: 20%;
+      }
+    }
+  }
+}
