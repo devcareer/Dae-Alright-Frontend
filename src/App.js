@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom'
 import RestauMenuPage from './Pages/Restaurant/RestauMenuPage'
 import Homepage from './Pages/Homepage'
 import UserDashboard from './Pages/user-dashboard';
+import UserDashboardMessaging from './Pages/user-dashboard/dashboard-messaging';
 
 import ReviewOrder from './Pages/ReviewOrder'
 import DashboardOrder from './Pages/user-dashboard/order-dashboard';
@@ -28,6 +29,7 @@ class App extends Component {
 
         <Route exact path="/dashboard/order" component={DashboardOrder} />
         <Route exact path="/dashboard/refund" component={OrderRefund} />
+        <Route exact path='/dashboard/messaging' component ={UserDashboardMessaging}/>
      </Switch> 
     
     </div>
