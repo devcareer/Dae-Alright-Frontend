@@ -1,0 +1,106 @@
+.message-container {
+  margin: 3rem;
+}
+
+.icon-class-message {
+  margin-right: 1rem;
+  color: grey
+}
+
+.message-container-box {
+  margin:2rem 0;
+  border: 1px solid grey;
+  height: 100%;
+  width: 100%;
+}
+
+.icon-class-circle {
+  color: #D6DB46;
+  margin: 1rem 0;
+  font-size: 3rem;
+
+
+}
+
+.text-box {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+ 
+
+  @media (max-width:768px) {
+    width: 100%;
+  }
+
+
+}
+
+.sender-detail {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.message-box {
+  clear: both;
+  background: rgba(202, 246, 230, 0.4);
+  margin: 0 2rem;
+  padding: 0.5rem;
+  &:after {
+    
+    content: " ";
+    clear: both;
+  }
+
+}
+
+.time {
+  display: block;
+}
+
+.receive{
+  justify-content: flex-end;
+  align-items: flex-end;
+  float: right;
+
+ 
+  &:after {
+    
+    content: " ";
+    clear: both;
+  }
+}
+
+
+button {
+  padding: 1rem;
+  color: white;
+  border: none;
+ 
+  background-color: #D6DB46;
+}
+
+input{
+  width: 80%;
+  height: 3.4rem;
+
+}
+::placeholder{
+  color: gray;
+  font-style: italic;
+  padding: 1rem;
+ }
+.icon-class-select{
+  color: gray;
+  cursor: pointer;
+  padding: 3px;
+  border:1px solid gray;
+  font-size: 3.4rem;
+  margin: -0.83rem 0;
+  margin-top: 0;
+}
+.input-container{
+  margin: 2rem;
+}
+label{
+  margin: 0;
+}
