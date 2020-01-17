@@ -7,8 +7,8 @@ import UserDashboard from './Pages/user-dashboard';
 
 import ReviewOrder from './Pages/ReviewOrder'
 import DashboardOrder from './Pages/user-dashboard/order-dashboard';
-import OrderRefund from "./Pages/user-dashboard/dashboard-refund"
-
+import OrderRefund from "./Pages/user-dashboard/dashboard-refund";
+import RestaurantReviewPage from './Pages/Restaurant-review/restuarant-review-page';
 
 
 
@@ -23,7 +23,7 @@ class App extends Component {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/dashboard/information" component={UserDashboard} />
         <Route exact path="/restaurant/menu" component={RestauMenuPage} />
-
+        <Route exact path="/restaurant/review" component={RestaurantReviewPage} />
         <Route exact path="/revieworder" component={ReviewOrder} />
 
         <Route exact path="/dashboard/order" component={DashboardOrder} />
