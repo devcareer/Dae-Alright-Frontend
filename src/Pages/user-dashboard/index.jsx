@@ -1,7 +1,5 @@
 import React from "react"
 import "./user-dashboard.scss"
-import AuthNav from "../../components/Navigation/AuthNav"
-import Navigation from "../../components/Navigation"
 import Details from "../../components/Details"
 import Footer from "../../components/Footer"
 import User from "../../components/user-dashboard-header"
