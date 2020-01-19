@@ -18,7 +18,7 @@ function AuthNav() {
       <Nav.Link className="nav-link" href="#">Refunds</Nav.Link>
       <Nav.Link className="nav-link" href="#">Message Center</Nav.Link>
       <Nav.Link className="nav-link" href="#">Track Order</Nav.Link>
-      <Nav.Link className="nav-link" href="#">Statistic</Nav.Link>
+      <Nav.Link className="nav-link" href="/dashboard/statistics">Statistic</Nav.Link>
       <Nav.Link className="nav-link" href="#">Help</Nav.Link>
       <Nav.Link className="nav-link" href="#">Log-out</Nav.Link>
     </Nav>
