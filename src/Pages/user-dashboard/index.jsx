@@ -2,13 +2,16 @@ import React from "react"
 import "./user-dashboard.scss"
 import Details from "../../components/Details"
 import Footer from "../../components/Footer"
-import DashboardHeader from "./dashboard-header/index" 
+import User from "../../components/user-dashboard-header"
 
 
 function UserDashboard() {
     return (
         <div className="dashboard">
-            <DashboardHeader />
+            <Navigation />
+            <User />
+            <AuthNav />
+
             <div className="information">
                 <h1 className="information-header">Account Information</h1>
                 <div className="image-input">

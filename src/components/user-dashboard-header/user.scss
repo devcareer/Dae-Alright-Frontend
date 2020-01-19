@@ -1,0 +1,22 @@
+.user-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0 ;
+
+
+    .user-name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .user-plan {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+}

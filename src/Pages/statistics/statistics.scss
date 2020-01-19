@@ -1,0 +1,62 @@
+
+.statistic {
+    margin-left: 5%;
+    margin-right: 3%;
+
+        .statistic-div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 5%;
+        margin-bottom: 10%;
+
+
+        .statistic-div-div {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            justify-content: space-between;
+            margin-top: 5%;
+            margin-left: 0%;
+            margin-right: 5%;
+
+            .statistic-text {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 42px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            .select {
+                border: 1px solid rgb(214, 200, 200);
+                width: 150px;
+            }
+        }
+        .statistic-image {
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .statistic {
+
+        .statistic-div {
+            margin-bottom: 20%;
+
+            .statistic-div-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .statistic-image {
+                height: 200px;
+            }
+        }
+    }
+    
+}

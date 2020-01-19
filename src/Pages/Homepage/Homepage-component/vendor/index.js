@@ -19,14 +19,17 @@ export default class Vendor extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-12 vendor-list-item">
-                                <img className="vendor-image img-responsive" src={item.imageUrl} alt="foodimage" />
-                                <h3 className="open">OPEN</h3>
-                                <h1 className="vendor-text">{item.name}</h1>
-                                <p className="vendor-paragraph">{item.address}</p>
-                                <div className="vendor-order">
-                                    <p className="vendor-order-paragraph"><strong>Min Order:</strong>{item.order}</p>
-                                    <p className="vendor-order-paragraph2"><strong>Delivery: </strong>{item.delivery}</p>
-                                </div> 
+                                <a href="#">
+                                    <img className="vendor-image img-responsive" src={item.imageUrl} alt="foodimage" />
+                                    <h3 className="open">OPEN</h3>
+                                    <h1 className="vendor-text">{item.name}</h1>
+                                    <p className="vendor-paragraph">{item.address}</p>
+                                    <div className="vendor-order">
+                                        <p className="vendor-order-paragraph"><strong>Min Order:</strong>{item.order}</p>
+                                        <p className="vendor-order-paragraph2"><strong>Delivery: </strong>{item.delivery}</p>
+                                    </div> 
+                                </a>
+                                
                             </div>
                         </div>
                     </div>     
